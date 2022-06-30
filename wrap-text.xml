@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>ASUS</Author>
+  <LastAuthor>ASUS</LastAuthor>
+  <Created>2022-03-22T10:43:47Z</Created>
+  <LastSaved>2022-03-22T12:42:51Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8340</WindowHeight>
+  <WindowWidth>19560</WindowWidth>
+  <WindowTopX>930</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="wrp-text">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="31" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="423"/>
+   <Column ss:Width="160.5"/>
+   <Column ss:Width="84.75"/>
+   <Column ss:Width="426"/>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">judul</Data></Cell>
+    <Cell><Data ss:Type="String">waktu</Data></Cell>
+    <Cell><Data ss:Type="String">category</Data></Cell>
+    <Cell><Data ss:Type="String">isi</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Wapres Ungkap Data Amerika Soal Ketahanan Pangan Indonesia</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 17:14 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Wakil Presiden Maruf Amin mengungkapkan, berdasarkan data Amerika Serikat kemampuan bertahan cadangan pangan Indonesia pada tahun 2020 hanya sekitar 21 hari.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Lebih Murah, YLKI Khawatir Konsumen Bakal Migrasi ke Minyak Goreng Curah</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 16:48 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Ketua Yayasan Lembaga Konsumen Indonesia (YLKI) Tulus Abadi menilai, disparitas (selisih) harga antara minyak goreng curah dan kemasan terlalu lebar.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Kemenkeu Siapkan 186 Pasal yang Mengatur Pendanaan Ibu Kota Baru</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 16:24 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Makro</Data></Cell>
+    <Cell><Data ss:Type="String">Kementerian Keuangan tengah menyiapkan 186 pasal dalam aturan turunan Rancangan Peraturan Pelaksanaan (RPP) Undang-Undang No. 3 Tahun 2022 tentang IKN.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Menghijau, IHSG Hari Ini Ditutup Tembus Level 7.000</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 15:37 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Kurs &amp; Saham</Data></Cell>
+    <Cell><Data ss:Type="String">Indeks Harga Saham Gabungan (IHSG) hari ini mendarat di zona hijau pada sesi terakhir perdagangan. Indeks ditutup naik 45,64 poin atau 0,66% tembus ke 7.000.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Tumbuh Berlipat dari PDB, Ekonomi Digital Jadi Kekuatan RI ke Depan</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 15:29 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Makro</Data></Cell>
+    <Cell><Data ss:Type="String">Laju pertumbuhan ekonomi digital Indonesia diproyeksi mencapai 8 kali lebih cepat daripada pertumbuhan produk domestik bruto (PDB).</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Harga Minyak Goreng di Swalayan Mahal, Pengusaha: Harap Maklum</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 14:39 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Menyusul dicabutnya aturan Harga Eceran Tertinggi (HET), minyak goreng kemasan kini tersedia melimpah di ritel modern dengan harga yang relatif mahal.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Tarif PPN Jadi 11%, Sri Mulyani: Masih di Bawah Rata-rata Dunia 15%</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 14:29 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Makro</Data></Cell>
+    <Cell><Data ss:Type="String">Menteri Keuangan (Menkeu) Sri Mulyani menyatakan bahwa kenaikan PPN menjadi 11% mulai April masih wajar dan berada di bawah rata-rata PPN dunia sebesar 15%.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Sri Mulyani Kasih Sinyal Harga BBM Pertamax Bisa Naik, Pertalite Masih Aman</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 14:01 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Menteri Keuangan (Menkeu) Sri Mulyani merespons terkait kabar kenaikan harga Bahan Bakar Minyak (BBM) jenis Pertalite, ketika harga minyak mentah dunia terus meroket.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Harga Minyak Terus Melaju, Uni Eropa Bimbang Mau Embargo Minyak Rusia</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 13:51 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Harga minyak mentah atau crude oil mengalami kenaikan pada perdagangan Selasa (22/3/2022), memperpanjang laju penguatan yang terjadi pada sesi sebelumnya.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Dear UMKM, Ini Bocoran Menko Airlangga Soal Komoditas Cuan Kekinian</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 13:10 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Menko Airlangga mengakui pelaku UMKM menjadi critical engine bagi pemulihan ekonomi nasional, dimana kontribusinya mencapai 61ngan menyerap 97% tenaga kerja nasional.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pengusaha Ritel Curhat: Distributor Minyak Goreng Masih Ada yang Ngumpet</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 12:59 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Asosiasi Pengusaha Ritel Indonesia (Aprindo) membeberkan, meskipun sudah free market akan tetapi distributor yang memasok minyak goreng ke ritel modern masih terbatas.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Sesi I IHSG Hari Ini Ditutup Menguat, Asing Belanja Rp608 Miliar</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 12:57 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Kurs &amp; Saham</Data></Cell>
+    <Cell><Data ss:Type="String">Indeks Harga Saham Gabungan (IHSG) hari ini menguat 24,91 poin atau 0,36% di level 6.980 pada penutupan sesi pertama perdagangan, Selasa (22/3/2022).</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Tunggu Keputusan Mudik Dilarang atau Tidak? Ini Penjelasan Kemenhub</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 12:44 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Kementerian Perhubungan menyatakan belum ada keputusan final terkait kebijakan mudik lebaran tahun ini. Aturan terkait angkutan mudik juga masih dibahas.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Bangun IKN Nusantara, 6 Peraturan Pelaksana Dikebut Siap Bulan Depan</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 12:31 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Aturan untuk memulai pembangunan Ibu Kota Negara (IKN) Nusantara terus dikebut, dimana ditargetkan ada 2 PP dan 4 Perpres untuk segera dirampungkan pada April 2022.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">OJK Dorong BUMN Masuk Pasar Modal Sebagai Alternatif Pendanaan</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 11:57 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Advertorial Ekbis</Data></Cell>
+    <Cell><Data ss:Type="String">Otoritas Jasa Keuangan mendorong perusahaan BUMN maupun anak perusahaan BUMN untuk memanfaatkan Pasar Modal sebagai sumber alternatif pendanaan perusahaan dalam mengembangkan bisnis dan usahanya.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pengusaha Ritel Senang HET Minyak Goreng Dicabut, Pasokan Melimpah</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 11:50 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Pencabutan Harga Eceran Tertinggi (HET) minyak goreng kemasan disambut gembira oleh pengusaha ritel modern. Pasokan minyak goreng pun melimpah lagi.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">OJK Rayu BUMN Agar Makin Banyak Nyebur ke Pasar Modal Indonesia</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 11:01 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Bursa Finansial</Data></Cell>
+    <Cell><Data ss:Type="String">Berdasarkan catatan Otoritas Jasa Keuangan (OJK) hingga saat ini jumlah perusahaan Badan Usaha Milik Negara (BUMN) yang telah melakukan penawaran umum pasar modal baru mencapai 23 perusahaan.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Rachmat Gobel: Tak Ada Mafia Minyak Goreng, Hanya Pengusaha Cari Untung</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 10:31 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Wakil Ketua DPR RI, Rachmat Gobel menyatakan, tak ada mafia minyak goreng, melainkan hanya pengusaha yang mencari celah untuk mendapatkan keuntungan.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">GoTo Perpanjang Masa Bookbuilding IPO hingga 24 Maret 2022</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 10:12 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Bursa Finansial</Data></Cell>
+    <Cell><Data ss:Type="String">PT GoTo Gojek Tokopedia Tbk atau GoTo memperpanjang masa penawaran awal perdana saham (bookbuilding period) selama tiga hari.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Tampil Perkasa pada Awal Sesi, IHSG Hari Ini Bertengger di Level 6.974</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 09:51 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Kurs &amp; Saham</Data></Cell>
+    <Cell><Data ss:Type="String">IHSG hari ini dibuka menguat di 6.974,97 pada perdagangan Selasa pagi (22/3/2022). IHSG hari ini dibuka menguat di 6.974,97 pada perdagangan Selasa pagi (22/3/2022).</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Harga Emas Antam Hari Ini Menguat, Termahal Dijual Rp929.600.000</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 09:35 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Harga emas batangan PT Aneka Tambang (Antam) terpantau menguat pada hari kedua pekan ini usai melemah pada perdagangan kemarin, yuk intip rincian harganya.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">81 Perusahaan Wajib Kucurkan 14 Ribu Ton Minyak Goreng Curah, Begini Mekanismenya</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 09:15 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">81 perusahaan industri minyak goreng wajib untuk menyediakan minyak goreng curah bagi masyarakat, usaha mikro, dan usaha kecil. Diketahui harga Minyak Goreng curah di masyarakat tak boleh lebih dari Rp14.000 per liter.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">NFT: Transformasi Pelindungan Hak Cipta dalam Bentuk Digital</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 09:01 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Advertorial Ekbis</Data></Cell>
+    <Cell><Data ss:Type="String">Fenomena Ghozali Everyday yang sukses menjual koleksi swafoto dalam bentuk Non-Fungible Token (NFT) pada platform OpenSea membuat semakin banyak orang tertarik untuk mempelajari aset digital.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Penyaluran Solar Subsidi hingga Februari Melebihi Kuota 10%</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 08:19 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Masyarakat tidak perlu khawatir dan tidak perlu panic buying. Pembelian bahan bakar diimbau untuk tetap sesuai dengan kebutuhan dan tetap hemat dalam penggunaannya mengingat saat ini harga minyak sangatlah mahal.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Luhut Ajak Singapura Garap Food Estate dan Ibu Kota Baru</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 07:59 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Menteri Koordinator Maritim dan Investasi, Luhut Binsar Pandjaitan mengajak Singapura untuk ikut serta dalam pengembangan food estate dan pembangunan Ibu Kota negara baru di Kalimantan.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Minim Booster, IHSG Hari Ini Bakal Berada di Kisaran Level 6.823-7.032</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 07:13 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Kurs &amp; Saham</Data></Cell>
+    <Cell><Data ss:Type="String">Indeks Harga Saham Gabungan atau IHSG hari ini berpotensi bergerak terbatas pada sepanjang perdagangan setelah kemarin merangkak naik.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Eropa Terpecah Soal Sanksi Embargo Minyak dan Gas Rusia</Data></Cell>
+    <Cell><Data ss:Type="String">Selasa, 22 Maret 2022 - 06:59 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Sektor Riil</Data></Cell>
+    <Cell><Data ss:Type="String">Para pemimpin Uni Eropa (UE) menemui jalan buntu mengenai apakah mereka bakal menjatuhkan sanksi sektor energi kepada Rusia ketika tekanan untuk memberikan respons atas invasi ke Ukraina semakin berat.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Investor Asing Jual Saham Setengah Triliun Lebih, Apa Saja yang Dilepas?</Data></Cell>
+    <Cell><Data ss:Type="String">Senin, 21 Maret 2022 - 23:30 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Bursa Finansial</Data></Cell>
+    <Cell><Data ss:Type="String">Investor asing terpantau melakukan aksi penjualan bersih saham secara akumulatif mencapai Rp567,93 miliar sepanjang perdagangan awal pekan, Senin (21/3/2022).</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ini Aturan Pungutan Pajak yang Bakal Berlaku Bulan Depan</Data></Cell>
+    <Cell><Data ss:Type="String">Senin, 21 Maret 2022 - 23:00 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Makro</Data></Cell>
+    <Cell><Data ss:Type="String">Selain kenaikan PPN, pemerintah juga akan menerapkan pajak karbon yang merupakan implementasi dari UU HPP yang bakal berlaku pula mulai April 2022.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Pesawat China Eastern Airlines Jatuh, Saham Boeing Langsung Menukik 6 Persen</Data></Cell>
+    <Cell><Data ss:Type="String">Senin, 21 Maret 2022 - 21:58 WIB</Data></Cell>
+    <Cell><Data ss:Type="String">Bursa Finansial</Data></Cell>
+    <Cell><Data ss:Type="String">Dow Jones Industrial Average turun 85,08 poin karena dipicu jatuhnya saham Boeing sebesar 5,9% menyusul insiden kecelakaan pesawat China Eastern Airlines.</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>4</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

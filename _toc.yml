@@ -5,3 +5,4 @@ format: jb-book
 root: intro
 chapters:
   - file: UAS-LSA
+  - file: k-means
