@@ -1,0 +1,3362 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Case Folding &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    UAS Web Mining-Topic Modelling(LSA)
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="UAS-LSA.html">
+   TOPIK MODELLING
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/TF_IDF.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTF_IDF.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/TF_IDF.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Case Folding
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-tokenisasi">
+   Filtering &amp; Tokenisasi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stopword-menggunkan-nltk">
+   Stopword menggunkan nltk
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stemming-bahasa-indonesia-menggunakan-sastrawi">
+   Stemming bahasa indonesia menggunakan Sastrawi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frequency-distribution">
+   Frequency Distribution
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-frequency-table">
+   Text Frequency Table
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analize">
+   Analize
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tf">
+   TF
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#idf">
+   IDF
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Case Folding</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Case Folding
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-tokenisasi">
+   Filtering &amp; Tokenisasi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stopword-menggunkan-nltk">
+   Stopword menggunkan nltk
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stemming-bahasa-indonesia-menggunakan-sastrawi">
+   Stemming bahasa indonesia menggunakan Sastrawi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frequency-distribution">
+   Frequency Distribution
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-frequency-table">
+   Text Frequency Table
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analize">
+   Analize
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tf">
+   TF
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#idf">
+   IDF
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="n">wrp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;scrapy_berita.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_13600</span><span class="o">/</span><span class="mf">2089656300.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">wrp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;scrapy_berita.csv&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wrp</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(24, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wrp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Topik</th>
+      <th>Tanggal</th>
+      <th>Judul</th>
+      <th>isi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Politik</td>
+      <td>Selasa, 22 Maret 2022 - 14:26 WIB</td>
+      <td>Hadapi Pemilu 2024, PKS Gelar Konsolidasi Pimp...</td>
+      <td>Fraksi PKS DPR akan mengadakan Konsolidasi Nas...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Politik</td>
+      <td>Selasa, 22 Maret 2022 - 14:10 WIB</td>
+      <td>Isu Reshuffle Mencuat, Gerindra Beri Respons B...</td>
+      <td>Isu perombakan (reshuffle) kabinet kembali men...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Hankam</td>
+      <td>Selasa, 22 Maret 2022 - 14:02 WIB</td>
+      <td>Jenderal Andika Akan Diangkat Jadi Warga Kehor...</td>
+      <td>Komandan Korps Marinir Mayjen TNI (Mar) Widodo...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Hankam</td>
+      <td>Selasa, 22 Maret 2022 - 13:45 WIB</td>
+      <td>KPU Kembali Tegaskan Tidak Ada Penundaan Pemil...</td>
+      <td>Ketua Komisi Pemilihan Umum (KPU) Ilham Saputr...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Opini</td>
+      <td>Selasa, 22 Maret 2022 - 13:42 WIB</td>
+      <td>Mengenal Komunikasi Pemasaran Jasa di Era Disr...</td>
+      <td>Menghadapi era disrupsi tentu tidak hanya diha...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menggambil data pada tabel isi</span>
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Fraksi PKS DPR akan mengadakan Konsolidasi Nas...
+1     Isu perombakan (reshuffle) kabinet kembali men...
+2     Komandan Korps Marinir Mayjen TNI (Mar) Widodo...
+3     Ketua Komisi Pemilihan Umum (KPU) Ilham Saputr...
+4     Menghadapi era disrupsi tentu tidak hanya diha...
+5     KPK menyelidiki kembali pengadaan E-KTP yang d...
+6     Polri meralat pernyataan terkait Gilang Widya ...
+7     Akademisi Universitas Paramadina, Yudi Latif m...
+8     Komisi Pemilihan Umum (KPU) menggelar simulasi...
+9     Puncak Haul ke-5 KH Hasyim Muzadi telah digela...
+10    Karo Penmas Divisi Humas Polri Brigjen Pol Ahm...
+11    Penyidik Komisi Pemberantasan Korupsi (KPK) me...
+12    Kepala Pusat Pelaporan dan Analisis Transaksi ...
+13    Kepala Staf Angkatan Udara (KSAU) Marsekal TNI...
+14    Komisi Pemberantasan Korupsi (KPK) perpanjang ...
+15    Pemerintah melalui Kementerian Hukum dan Hak A...
+16    Kecelakaan lalu lintas masih menjadi salah sat...
+17    Pengunduran diri Rais Aam PBNU KH Miftachul Ak...
+18    Marsekal Fadjar melakukan pertemuan bilateral ...
+19    KPU mempersilakan Badan Pengawas Pemilu (Bawas...
+20    Beberapa peristiwa sejarah penting terjadi bai...
+21    Penyidik Bareskrim Polri menjadwalkan melakuka...
+22    Sedangkan Sandiaga merupakan kader Partai Geri...
+23    Panglima TNI Jenderal TNI Andika Perkasa menye...
+Name: isi, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="case-folding">
+<h1>Case Folding<a class="headerlink" href="#case-folding" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mengubah huruf menjadi kecil dengan menggunakan Series.str.lower() pada pandas</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     fraksi pks dpr akan mengadakan konsolidasi nas...
+1     isu perombakan (reshuffle) kabinet kembali men...
+2     komandan korps marinir mayjen tni (mar) widodo...
+3     ketua komisi pemilihan umum (kpu) ilham saputr...
+4     menghadapi era disrupsi tentu tidak hanya diha...
+5     kpk menyelidiki kembali pengadaan e-ktp yang d...
+6     polri meralat pernyataan terkait gilang widya ...
+7     akademisi universitas paramadina, yudi latif m...
+8     komisi pemilihan umum (kpu) menggelar simulasi...
+9     puncak haul ke-5 kh hasyim muzadi telah digela...
+10    karo penmas divisi humas polri brigjen pol ahm...
+11    penyidik komisi pemberantasan korupsi (kpk) me...
+12    kepala pusat pelaporan dan analisis transaksi ...
+13    kepala staf angkatan udara (ksau) marsekal tni...
+14    komisi pemberantasan korupsi (kpk) perpanjang ...
+15    pemerintah melalui kementerian hukum dan hak a...
+16    kecelakaan lalu lintas masih menjadi salah sat...
+17    pengunduran diri rais aam pbnu kh miftachul ak...
+18    marsekal fadjar melakukan pertemuan bilateral ...
+19    kpu mempersilakan badan pengawas pemilu (bawas...
+20    beberapa peristiwa sejarah penting terjadi bai...
+21    penyidik bareskrim polri menjadwalkan melakuka...
+22    sedangkan sandiaga merupakan kader partai geri...
+23    panglima tni jenderal tni andika perkasa menye...
+Name: isi, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="filtering-tokenisasi">
+<h1>Filtering &amp; Tokenisasi<a class="headerlink" href="#filtering-tokenisasi" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">import</span> <span class="nn">re</span> <span class="c1">#regex library</span>
+<span class="c1">#nltk.download(&#39;punkt&#39;)</span>
+
+<span class="c1"># import word_tokenize &amp; FreqDist from NLTK</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span> 
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span>
+
+<span class="c1"># ------ Proses Tokenisasi ---------</span>
+
+<span class="k">def</span> <span class="nf">remove_all</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># remove tab, new line, ans back slice</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">t&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">u&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="c1"># remove non ASCII (emoticon, chinese word, .etc)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+    <span class="c1"># remove mention, link, hashtag</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([@#][A-Za-z0-9]+)|(\w+:\/\/\S+)&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="c1"># remove incomplete URL</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+                
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_all</span><span class="p">)</span>
+
+<span class="c1">#remove number</span>
+<span class="k">def</span> <span class="nf">remove_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_number</span><span class="p">)</span>
+
+<span class="c1">#remove punctuation</span>
+<span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_punctuation</span><span class="p">)</span>
+
+<span class="c1">#remove whitespace leading &amp; trailing</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_LT</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_LT</span><span class="p">)</span>
+
+<span class="c1">#remove multiple whitespace into single whitespace</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_multiple</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_multiple</span><span class="p">)</span>
+
+<span class="c1"># remove single char</span>
+<span class="k">def</span> <span class="nf">remove_singl_char</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\b[a-zA-Z]\b&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_singl_char</span><span class="p">)</span>
+
+<span class="c1"># NLTK word rokenize </span>
+<span class="k">def</span> <span class="nf">word_tokenize_wrapper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_tokenisasi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize_wrapper</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hasil Tokenisasi : </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_tokenisasi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Tokenisasi : 
+
+0    [fraksi, pks, dpr, akan, mengadakan, konsolida...
+1    [isu, perombakan, reshuffle, kabinet, kembali,...
+2    [komandan, korps, marinir, mayjen, tni, mar, w...
+3    [ketua, komisi, pemilihan, umum, kpu, ilham, s...
+4    [menghadapi, era, disrupsi, tentu, tidak, hany...
+Name: isi_tokenisasi, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="stopword-menggunkan-nltk">
+<h1>Stopword menggunkan nltk<a class="headerlink" href="#stopword-menggunkan-nltk" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\ASUS\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+
+<span class="c1"># ----------------------- get stopword from NLTK stopword -------------------------------</span>
+<span class="c1"># get stopword indonesia</span>
+<span class="n">list_stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># ----------------------- add stopword from txt file ------------------------------------</span>
+<span class="c1"># read txt stopword using pandas</span>
+<span class="n">txt_stopword</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;scrapy_berita.csv&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;stopwords&quot;</span><span class="p">],</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------------------------------------------------------------------</span>
+
+<span class="c1"># convert list to dictionary</span>
+<span class="n">list_stopwords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">list_stopwords</span><span class="p">)</span>
+
+
+<span class="c1">#remove stopword pada list token</span>
+<span class="k">def</span> <span class="nf">stopwords_removal</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_stopwords</span><span class="p">]</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_stopword&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_tokenisasi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopwords_removal</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_stopword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    [fraksi, pks, dpr, mengadakan, konsolidasi, na...
+1    [isu, perombakan, reshuffle, kabinet, mencuat,...
+2    [komandan, korps, marinir, mayjen, tni, mar, w...
+3    [ketua, komisi, pemilihan, kpu, ilham, saputra...
+4    [menghadapi, era, disrupsi, dihadapkan, inovas...
+Name: isi_stopword, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="stemming-bahasa-indonesia-menggunakan-sastrawi">
+<h1>Stemming bahasa indonesia menggunakan Sastrawi<a class="headerlink" href="#stemming-bahasa-indonesia-menggunakan-sastrawi" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">swifter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting swifter
+  Downloading swifter-1.1.2.tar.gz (633 kB)
+Requirement already satisfied: pandas&gt;=1.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from swifter) (1.3.4)
+Requirement already satisfied: psutil&gt;=5.6.6 in c:\users\lenovo\anaconda3\lib\site-packages (from swifter) (5.8.0)
+Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in c:\users\lenovo\anaconda3\lib\site-packages (from swifter) (2021.10.0)
+Requirement already satisfied: tqdm&gt;=4.33.0 in c:\users\lenovo\anaconda3\lib\site-packages (from swifter) (4.62.3)
+Requirement already satisfied: ipywidgets&gt;=7.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from swifter) (7.6.5)
+Requirement already satisfied: cloudpickle&gt;=0.2.2 in c:\users\lenovo\anaconda3\lib\site-packages (from swifter) (2.0.0)
+Requirement already satisfied: parso&gt;0.4.0 in c:\users\lenovo\anaconda3\lib\site-packages (from swifter) (0.8.2)
+Requirement already satisfied: bleach&gt;=3.1.1 in c:\users\lenovo\anaconda3\lib\site-packages (from swifter) (4.0.0)
+Requirement already satisfied: webencodings in c:\users\lenovo\anaconda3\lib\site-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
+Requirement already satisfied: packaging in c:\users\lenovo\anaconda3\lib\site-packages (from bleach&gt;=3.1.1-&gt;swifter) (21.0)
+Requirement already satisfied: six&gt;=1.9.0 in c:\users\lenovo\anaconda3\lib\site-packages (from bleach&gt;=3.1.1-&gt;swifter) (1.16.0)
+Requirement already satisfied: fsspec&gt;=0.6.0 in c:\users\lenovo\anaconda3\lib\site-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2021.10.1)
+Requirement already satisfied: partd&gt;=0.3.10 in c:\users\lenovo\anaconda3\lib\site-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.2.0)
+Requirement already satisfied: pyyaml in c:\users\lenovo\anaconda3\lib\site-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
+Requirement already satisfied: toolz&gt;=0.8.2 in c:\users\lenovo\anaconda3\lib\site-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.11.1)
+Requirement already satisfied: numpy&gt;=1.18 in c:\users\lenovo\anaconda3\lib\site-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.20.3)
+Requirement already satisfied: ipython&gt;=4.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.29.0)
+Requirement already satisfied: nbformat&gt;=4.2.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.1.3)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (1.0.0)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.5.1)
+Requirement already satisfied: traitlets&gt;=4.3.1 in c:\users\lenovo\anaconda3\lib\site-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.1.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in c:\users\lenovo\anaconda3\lib\site-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (6.4.1)
+Requirement already satisfied: ipython-genutils~=0.2.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: debugpy&lt;2.0,&gt;=1.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.4.1)
+Requirement already satisfied: jupyter-client&lt;8.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)Note: you may need to restart the kernel to use updated packages.
+Requirement already satisfied: matplotlib-inline&lt;0.2.0,&gt;=0.1.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.1.2)
+Requirement already satisfied: tornado&lt;7.0,&gt;=4.2 in c:\users\lenovo\anaconda3\lib\site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1)
+Requirement already satisfied: decorator in c:\users\lenovo\anaconda3\lib\site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.1.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.20)
+Requirement already satisfied: backcall in c:\users\lenovo\anaconda3\lib\site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: jedi&gt;=0.16 in c:\users\lenovo\anaconda3\lib\site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.0)
+Requirement already satisfied: pickleshare in c:\users\lenovo\anaconda3\lib\site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
+Requirement already satisfied: pygments in c:\users\lenovo\anaconda3\lib\site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.10.0)
+Requirement already satisfied: setuptools&gt;=18.5 in c:\users\lenovo\anaconda3\lib\site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (58.0.4)
+Requirement already satisfied: colorama in c:\users\lenovo\anaconda3\lib\site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4.4)
+Requirement already satisfied: python-dateutil&gt;=2.1 in c:\users\lenovo\anaconda3\lib\site-packages (from jupyter-client&lt;8.0-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.8.2)
+Requirement already satisfied: jupyter-core&gt;=4.6.0 in c:\users\lenovo\anaconda3\lib\site-packages (from jupyter-client&lt;8.0-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.1)
+Requirement already satisfied: pyzmq&gt;=13 in c:\users\lenovo\anaconda3\lib\site-packages (from jupyter-client&lt;8.0-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (22.2.1)
+Requirement already satisfied: pywin32&gt;=1.0 in c:\users\lenovo\anaconda3\lib\site-packages (from jupyter-core&gt;=4.6.0-&gt;jupyter-client&lt;8.0-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (228)
+Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in c:\users\lenovo\anaconda3\lib\site-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.2.0)
+Requirement already satisfied: attrs&gt;=17.4.0 in c:\users\lenovo\anaconda3\lib\site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.2.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.2.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in c:\users\lenovo\anaconda3\lib\site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.2.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.0)
+Requirement already satisfied: pyparsing&gt;=2.0.2 in c:\users\lenovo\anaconda3\lib\site-packages (from packaging-&gt;bleach&gt;=3.1.1-&gt;swifter) (3.0.4)
+Requirement already satisfied: pytz&gt;=2017.3 in c:\users\lenovo\anaconda3\lib\site-packages (from pandas&gt;=1.0.0-&gt;swifter) (2021.3)
+Requirement already satisfied: locket in c:\users\lenovo\anaconda3\lib\site-packages\locket-0.2.1-py3.9.egg (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.2.1)
+Requirement already satisfied: wcwidth in c:\users\lenovo\anaconda3\lib\site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.5)
+Requirement already satisfied: notebook&gt;=4.4.1 in c:\users\lenovo\anaconda3\lib\site-packages (from widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.4.5)
+Requirement already satisfied: terminado&gt;=0.8.3 in c:\users\lenovo\anaconda3\lib\site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.9.4)
+Requirement already satisfied: Send2Trash&gt;=1.5.0 in c:\users\lenovo\anaconda3\lib\site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
+Requirement already satisfied: nbconvert in c:\users\lenovo\anaconda3\lib\site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.0)
+Requirement already satisfied: prometheus-client in c:\users\lenovo\anaconda3\lib\site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.11.0)
+Requirement already satisfied: jinja2 in c:\users\lenovo\anaconda3\lib\site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.11.3)
+Requirement already satisfied: argon2-cffi in c:\users\lenovo\anaconda3\lib\site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (20.1.0)
+Requirement already satisfied: pywinpty&gt;=0.5 in c:\users\lenovo\anaconda3\lib\site-packages (from terminado&gt;=0.8.3-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.7)
+Requirement already satisfied: cffi&gt;=1.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.14.6)
+Requirement already satisfied: pycparser in c:\users\lenovo\anaconda3\lib\site-packages (from cffi&gt;=1.0.0-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.20)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in c:\users\lenovo\anaconda3\lib\site-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.1.1)
+
+Requirement already satisfied: nbclient&lt;0.6.0,&gt;=0.5.0 in c:\users\lenovo\anaconda3\lib\site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.3)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in c:\users\lenovo\anaconda3\lib\site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
+Requirement already satisfied: jupyterlab-pygments in c:\users\lenovo\anaconda3\lib\site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.1.2)
+Requirement already satisfied: defusedxml in c:\users\lenovo\anaconda3\lib\site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
+Requirement already satisfied: testpath in c:\users\lenovo\anaconda3\lib\site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.0)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in c:\users\lenovo\anaconda3\lib\site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.3)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in c:\users\lenovo\anaconda3\lib\site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.4.3)
+Requirement already satisfied: async-generator in c:\users\lenovo\anaconda3\lib\site-packages (from nbclient&lt;0.6.0,&gt;=0.5.0-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.10)
+Requirement already satisfied: nest-asyncio in c:\users\lenovo\anaconda3\lib\site-packages (from nbclient&lt;0.6.0,&gt;=0.5.0-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.1)
+Building wheels for collected packages: swifter
+  Building wheel for swifter (setup.py): started
+  Building wheel for swifter (setup.py): finished with status &#39;done&#39;
+  Created wheel for swifter: filename=swifter-1.1.2-py3-none-any.whl size=13210 sha256=1ff909ec00a0f3f3a27411fdbb9bb0945ea280f93eabf3a11974bfeb5498e4bf
+  Stored in directory: c:\users\lenovo\appdata\local\pip\cache\wheels\9a\0f\37\510c65f041d0aa1a38dc53c67d46c0dbee660816f0c9d1ad17
+Successfully built swifter
+Installing collected packages: swifter
+Successfully installed swifter-1.1.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wrp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Topik</th>
+      <th>Tanggal</th>
+      <th>Judul</th>
+      <th>isi</th>
+      <th>isi_tokenisasi</th>
+      <th>isi_stopword</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Politik</td>
+      <td>Selasa, 22 Maret 2022 - 14:26 WIB</td>
+      <td>Hadapi Pemilu 2024, PKS Gelar Konsolidasi Pimp...</td>
+      <td>fraksi pks dpr akan mengadakan konsolidasi nas...</td>
+      <td>[fraksi, pks, dpr, akan, mengadakan, konsolida...</td>
+      <td>[fraksi, pks, dpr, mengadakan, konsolidasi, na...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Politik</td>
+      <td>Selasa, 22 Maret 2022 - 14:10 WIB</td>
+      <td>Isu Reshuffle Mencuat, Gerindra Beri Respons B...</td>
+      <td>isu perombakan reshuffle kabinet kembali mencu...</td>
+      <td>[isu, perombakan, reshuffle, kabinet, kembali,...</td>
+      <td>[isu, perombakan, reshuffle, kabinet, mencuat,...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Hankam</td>
+      <td>Selasa, 22 Maret 2022 - 14:02 WIB</td>
+      <td>Jenderal Andika Akan Diangkat Jadi Warga Kehor...</td>
+      <td>komandan korps marinir mayjen tni mar widodo d...</td>
+      <td>[komandan, korps, marinir, mayjen, tni, mar, w...</td>
+      <td>[komandan, korps, marinir, mayjen, tni, mar, w...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Hankam</td>
+      <td>Selasa, 22 Maret 2022 - 13:45 WIB</td>
+      <td>KPU Kembali Tegaskan Tidak Ada Penundaan Pemil...</td>
+      <td>ketua komisi pemilihan umum kpu ilham saputra ...</td>
+      <td>[ketua, komisi, pemilihan, umum, kpu, ilham, s...</td>
+      <td>[ketua, komisi, pemilihan, kpu, ilham, saputra...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Opini</td>
+      <td>Selasa, 22 Maret 2022 - 13:42 WIB</td>
+      <td>Mengenal Komunikasi Pemasaran Jasa di Era Disr...</td>
+      <td>menghadapi era disrupsi tentu tidak hanya diha...</td>
+      <td>[menghadapi, era, disrupsi, tentu, tidak, hany...</td>
+      <td>[menghadapi, era, disrupsi, dihadapkan, inovas...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import Sastrawi package</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">import</span> <span class="nn">swifter</span>
+
+<span class="c1"># create stemmer</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+
+<span class="c1"># stemmed</span>
+<span class="k">def</span> <span class="nf">stemmed_wrapper</span><span class="p">(</span><span class="n">term</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+
+<span class="n">term_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">document</span> <span class="ow">in</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_stopword&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">term</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+            <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">term_dict</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+    <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="n">stemmed_wrapper</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="p">,</span><span class="s2">&quot;:&quot;</span> <span class="p">,</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">term_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># apply stemmed term to dataframe</span>
+<span class="k">def</span> <span class="nf">get_stemmed_term</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">]</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_stemmer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_stopword&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">swifter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_stemmed_term</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_stemmer&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>283
+------------------------
+fraksi : fraksi
+pks : pks
+dpr : dpr
+mengadakan : ada
+konsolidasi : konsolidasi
+nasional : nasional
+pimpinan : pimpin
+dprd : dprd
+indonesia : indonesia
+memantapkan : mantap
+kerja : kerja
+pemilu : milu
+isu : isu
+perombakan : ombak
+reshuffle : reshuffle
+kabinet : kabinet
+mencuat : cuat
+permukaan : muka
+publik : publik
+kabarnya : kabar
+presiden : presiden
+jokowi : jokowi
+kocok : kocok
+ulang : ulang
+kabinetnya : kabinet
+rabu : rabu
+komandan : komandan
+korps : korps
+marinir : marinir
+mayjen : mayjen
+tni : tni
+mar : mar
+widodo : widodo
+dwi : dwi
+purwanto : purwanto
+dilantik : lantik
+februari : februari
+menghadap : hadap
+panglima : panglima
+jenderal : jenderal
+andika : andika
+perkasa : perkasa
+mabes : mabes
+ketua : ketua
+komisi : komisi
+pemilihan : pilih
+kpu : kpu
+ilham : ilham
+saputra : saputra
+penundaan : tunda
+melanjutkan : lanjut
+tahapan : tahap
+sesuai : sesuai
+jadwal : jadwal
+menghadapi : hadap
+era : era
+disrupsi : disrupsi
+dihadapkan : hadap
+inovasi : inovasi
+pemanfaatan : manfaat
+teknologi : teknologi
+bisnis : bisnis
+jasa : jasa
+kemampuan : mampu
+beradaptasi : adaptasi
+kpk : kpk
+menyelidiki : selidik
+pengadaan : ada
+ektp : ektp
+diduga : duga
+merugikan : rugi
+keuangan : uang
+negara : negara
+triliunan : triliun
+rupiah : rupiah
+perum : perum
+percetakan : cetak
+republik : republik
+pnri : pnri
+polri : polri
+meralat : ralat
+pernyataan : nyata
+terkait : kait
+gilang : gilang
+widya : widya
+pramana : pramana
+juragan : juragan
+dilaporkan : lapor
+bareskrim : bareskrim
+dugaan : duga
+penipuan : tipu
+kejahatan : jahat
+rahasia : rahasia
+dagang : dagang
+akademisi : akademisi
+universitas : universitas
+paramadina : paramadina
+yudi : yudi
+latif : latif
+sistem : sistem
+demokrasi : demokrasi
+sesungguhnya : sungguh
+prosedural : prosedural
+rusak : rusak
+ditunda : tunda
+menggelar : gelar
+simulasi : simulasi
+penyederhanaan : sederhana
+surat : surat
+suara : suara
+halaman : halaman
+kantor : kantor
+ri : ri
+jakarta : jakarta
+selasa : selasa
+puncak : puncak
+haul : haul
+kh : kh
+hasyim : hasyim
+muzadi : muzadi
+digelar : gelar
+masjid : masjid
+pesantren : pesantren
+alhikam : alhikam
+depok : depok
+jawa : jawa
+barat : barat
+minggu : minggu
+karo : karo
+penmas : penmas
+divisi : divisi
+humas : humas
+brigjen : brigjen
+pol : pol
+ahmad : ahmad
+ramadhan : ramadhan
+dikenal : kenal
+penyidik : sidik
+pemberantasan : berantas
+korupsi : korupsi
+mengagendakan : agenda
+pemeriksaan : periksa
+mantan : mantan
+ppp : ppp
+romahurmuziy : romahurmuziy
+kepala : kepala
+pusat : pusat
+pelaporan : lapor
+analisis : analisis
+transaksi : transaksi
+ppatk : ppatk
+ivan : ivan
+yustiavandana : yustiavandana
+mengantisipasi : antisipasi
+money : money
+politics : politics
+politik : politik
+uang : uang
+menjelang : jelang
+staf : staf
+angkatan : angkat
+udara : udara
+ksau : ksau
+marsekal : marsekal
+fadjar : fadjar
+prasetyo : prasetyo
+kunjungan : kunjung
+nostalgia : nostalgia
+australian : australian
+defence : defence
+college : college
+adc : adc
+alumnus : alumnus
+perpanjang : panjang
+penahanan : tahan
+hakim : hakim
+nonaktif : nonaktif
+pengadilan : adil
+negeri : negeri
+pn : pn
+surabaya : surabaya
+itong : itong
+isnaeni : isnaeni
+hidayat : hidayat
+iih : iih
+pemerintah : perintah
+kementerian : menteri
+hukum : hukum
+hak : hak
+asasi : asasi
+manusia : manusia
+kemenkumham : kemenkumham
+komitmen : komitmen
+mendukung : dukung
+pemulihan : pulih
+ekonomi : ekonomi
+upayaupaya : upayaupaya
+mendorong : dorong
+peningkatan : tingkat
+potensi : potensi
+kekayaan : kaya
+intelektual : intelektual
+ki : ki
+kecelakaan : celaka
+lintas : lintas
+salah : salah
+penyebab : sebab
+meninggal : tinggal
+dunia : dunia
+terbesar : besar
+berdasarkan : dasar
+data : data
+tahunnya : tahun
+puluhan : puluh
+ribu : ribu
+nyawa : nyawa
+melayang : layang
+siasia : siasia
+jalan : jalan
+pengunduran : undur
+rais : rais
+aam : aam
+pbnu : pbnu
+miftachul : miftachul
+akhyar : akhyar
+jabatan : jabat
+majelis : majelis
+ulama : ulama
+mui : mui
+dinilai : nilai
+representasi : representasi
+nu : nu
+pertemuan : temu
+bilateral : bilateral
+sehari : hari
+air : air
+and : and
+space : space
+power : power
+conference : conference
+national : national
+convention : convention
+centre : centre
+canbera : canbera
+senin : senin
+mempersilakan : sila
+badan : badan
+pengawas : awas
+bawaslu : bawaslu
+memiliki : milik
+rencana : rencana
+menggugat : gugat
+pkpu : pkpu
+pendaftaran : daftar
+partai : partai
+calon : calon
+peserta : serta
+peristiwa : peristiwa
+sejarah : sejarah
+tanggal : tanggal
+maret : maret
+berdirinya : diri
+liga : liga
+arab : arab
+menjadwalkan : jadwal
+artis : artis
+rizky : rizky
+billar : billar
+menjerat : jerat
+doni : doni
+salmanan : salmanan
+sandiaga : sandiaga
+kader : kader
+gerindra : gerindra
+bersamaan : sama
+prabowo : prabowo
+subianto : subianto
+dijagokan : jago
+capres : capres
+dipelajari : ajar
+konflik : konflik
+rusiaukraina : rusiaukraina
+perkembangan : kembang
+{&#39;fraksi&#39;: &#39;fraksi&#39;, &#39;pks&#39;: &#39;pks&#39;, &#39;dpr&#39;: &#39;dpr&#39;, &#39;mengadakan&#39;: &#39;ada&#39;, &#39;konsolidasi&#39;: &#39;konsolidasi&#39;, &#39;nasional&#39;: &#39;nasional&#39;, &#39;pimpinan&#39;: &#39;pimpin&#39;, &#39;dprd&#39;: &#39;dprd&#39;, &#39;indonesia&#39;: &#39;indonesia&#39;, &#39;memantapkan&#39;: &#39;mantap&#39;, &#39;kerja&#39;: &#39;kerja&#39;, &#39;pemilu&#39;: &#39;milu&#39;, &#39;isu&#39;: &#39;isu&#39;, &#39;perombakan&#39;: &#39;ombak&#39;, &#39;reshuffle&#39;: &#39;reshuffle&#39;, &#39;kabinet&#39;: &#39;kabinet&#39;, &#39;mencuat&#39;: &#39;cuat&#39;, &#39;permukaan&#39;: &#39;muka&#39;, &#39;publik&#39;: &#39;publik&#39;, &#39;kabarnya&#39;: &#39;kabar&#39;, &#39;presiden&#39;: &#39;presiden&#39;, &#39;jokowi&#39;: &#39;jokowi&#39;, &#39;kocok&#39;: &#39;kocok&#39;, &#39;ulang&#39;: &#39;ulang&#39;, &#39;kabinetnya&#39;: &#39;kabinet&#39;, &#39;rabu&#39;: &#39;rabu&#39;, &#39;komandan&#39;: &#39;komandan&#39;, &#39;korps&#39;: &#39;korps&#39;, &#39;marinir&#39;: &#39;marinir&#39;, &#39;mayjen&#39;: &#39;mayjen&#39;, &#39;tni&#39;: &#39;tni&#39;, &#39;mar&#39;: &#39;mar&#39;, &#39;widodo&#39;: &#39;widodo&#39;, &#39;dwi&#39;: &#39;dwi&#39;, &#39;purwanto&#39;: &#39;purwanto&#39;, &#39;dilantik&#39;: &#39;lantik&#39;, &#39;februari&#39;: &#39;februari&#39;, &#39;menghadap&#39;: &#39;hadap&#39;, &#39;panglima&#39;: &#39;panglima&#39;, &#39;jenderal&#39;: &#39;jenderal&#39;, &#39;andika&#39;: &#39;andika&#39;, &#39;perkasa&#39;: &#39;perkasa&#39;, &#39;mabes&#39;: &#39;mabes&#39;, &#39;ketua&#39;: &#39;ketua&#39;, &#39;komisi&#39;: &#39;komisi&#39;, &#39;pemilihan&#39;: &#39;pilih&#39;, &#39;kpu&#39;: &#39;kpu&#39;, &#39;ilham&#39;: &#39;ilham&#39;, &#39;saputra&#39;: &#39;saputra&#39;, &#39;penundaan&#39;: &#39;tunda&#39;, &#39;melanjutkan&#39;: &#39;lanjut&#39;, &#39;tahapan&#39;: &#39;tahap&#39;, &#39;sesuai&#39;: &#39;sesuai&#39;, &#39;jadwal&#39;: &#39;jadwal&#39;, &#39;menghadapi&#39;: &#39;hadap&#39;, &#39;era&#39;: &#39;era&#39;, &#39;disrupsi&#39;: &#39;disrupsi&#39;, &#39;dihadapkan&#39;: &#39;hadap&#39;, &#39;inovasi&#39;: &#39;inovasi&#39;, &#39;pemanfaatan&#39;: &#39;manfaat&#39;, &#39;teknologi&#39;: &#39;teknologi&#39;, &#39;bisnis&#39;: &#39;bisnis&#39;, &#39;jasa&#39;: &#39;jasa&#39;, &#39;kemampuan&#39;: &#39;mampu&#39;, &#39;beradaptasi&#39;: &#39;adaptasi&#39;, &#39;kpk&#39;: &#39;kpk&#39;, &#39;menyelidiki&#39;: &#39;selidik&#39;, &#39;pengadaan&#39;: &#39;ada&#39;, &#39;ektp&#39;: &#39;ektp&#39;, &#39;diduga&#39;: &#39;duga&#39;, &#39;merugikan&#39;: &#39;rugi&#39;, &#39;keuangan&#39;: &#39;uang&#39;, &#39;negara&#39;: &#39;negara&#39;, &#39;triliunan&#39;: &#39;triliun&#39;, &#39;rupiah&#39;: &#39;rupiah&#39;, &#39;perum&#39;: &#39;perum&#39;, &#39;percetakan&#39;: &#39;cetak&#39;, &#39;republik&#39;: &#39;republik&#39;, &#39;pnri&#39;: &#39;pnri&#39;, &#39;polri&#39;: &#39;polri&#39;, &#39;meralat&#39;: &#39;ralat&#39;, &#39;pernyataan&#39;: &#39;nyata&#39;, &#39;terkait&#39;: &#39;kait&#39;, &#39;gilang&#39;: &#39;gilang&#39;, &#39;widya&#39;: &#39;widya&#39;, &#39;pramana&#39;: &#39;pramana&#39;, &#39;juragan&#39;: &#39;juragan&#39;, &#39;dilaporkan&#39;: &#39;lapor&#39;, &#39;bareskrim&#39;: &#39;bareskrim&#39;, &#39;dugaan&#39;: &#39;duga&#39;, &#39;penipuan&#39;: &#39;tipu&#39;, &#39;kejahatan&#39;: &#39;jahat&#39;, &#39;rahasia&#39;: &#39;rahasia&#39;, &#39;dagang&#39;: &#39;dagang&#39;, &#39;akademisi&#39;: &#39;akademisi&#39;, &#39;universitas&#39;: &#39;universitas&#39;, &#39;paramadina&#39;: &#39;paramadina&#39;, &#39;yudi&#39;: &#39;yudi&#39;, &#39;latif&#39;: &#39;latif&#39;, &#39;sistem&#39;: &#39;sistem&#39;, &#39;demokrasi&#39;: &#39;demokrasi&#39;, &#39;sesungguhnya&#39;: &#39;sungguh&#39;, &#39;prosedural&#39;: &#39;prosedural&#39;, &#39;rusak&#39;: &#39;rusak&#39;, &#39;ditunda&#39;: &#39;tunda&#39;, &#39;menggelar&#39;: &#39;gelar&#39;, &#39;simulasi&#39;: &#39;simulasi&#39;, &#39;penyederhanaan&#39;: &#39;sederhana&#39;, &#39;surat&#39;: &#39;surat&#39;, &#39;suara&#39;: &#39;suara&#39;, &#39;halaman&#39;: &#39;halaman&#39;, &#39;kantor&#39;: &#39;kantor&#39;, &#39;ri&#39;: &#39;ri&#39;, &#39;jakarta&#39;: &#39;jakarta&#39;, &#39;selasa&#39;: &#39;selasa&#39;, &#39;puncak&#39;: &#39;puncak&#39;, &#39;haul&#39;: &#39;haul&#39;, &#39;kh&#39;: &#39;kh&#39;, &#39;hasyim&#39;: &#39;hasyim&#39;, &#39;muzadi&#39;: &#39;muzadi&#39;, &#39;digelar&#39;: &#39;gelar&#39;, &#39;masjid&#39;: &#39;masjid&#39;, &#39;pesantren&#39;: &#39;pesantren&#39;, &#39;alhikam&#39;: &#39;alhikam&#39;, &#39;depok&#39;: &#39;depok&#39;, &#39;jawa&#39;: &#39;jawa&#39;, &#39;barat&#39;: &#39;barat&#39;, &#39;minggu&#39;: &#39;minggu&#39;, &#39;karo&#39;: &#39;karo&#39;, &#39;penmas&#39;: &#39;penmas&#39;, &#39;divisi&#39;: &#39;divisi&#39;, &#39;humas&#39;: &#39;humas&#39;, &#39;brigjen&#39;: &#39;brigjen&#39;, &#39;pol&#39;: &#39;pol&#39;, &#39;ahmad&#39;: &#39;ahmad&#39;, &#39;ramadhan&#39;: &#39;ramadhan&#39;, &#39;dikenal&#39;: &#39;kenal&#39;, &#39;penyidik&#39;: &#39;sidik&#39;, &#39;pemberantasan&#39;: &#39;berantas&#39;, &#39;korupsi&#39;: &#39;korupsi&#39;, &#39;mengagendakan&#39;: &#39;agenda&#39;, &#39;pemeriksaan&#39;: &#39;periksa&#39;, &#39;mantan&#39;: &#39;mantan&#39;, &#39;ppp&#39;: &#39;ppp&#39;, &#39;romahurmuziy&#39;: &#39;romahurmuziy&#39;, &#39;kepala&#39;: &#39;kepala&#39;, &#39;pusat&#39;: &#39;pusat&#39;, &#39;pelaporan&#39;: &#39;lapor&#39;, &#39;analisis&#39;: &#39;analisis&#39;, &#39;transaksi&#39;: &#39;transaksi&#39;, &#39;ppatk&#39;: &#39;ppatk&#39;, &#39;ivan&#39;: &#39;ivan&#39;, &#39;yustiavandana&#39;: &#39;yustiavandana&#39;, &#39;mengantisipasi&#39;: &#39;antisipasi&#39;, &#39;money&#39;: &#39;money&#39;, &#39;politics&#39;: &#39;politics&#39;, &#39;politik&#39;: &#39;politik&#39;, &#39;uang&#39;: &#39;uang&#39;, &#39;menjelang&#39;: &#39;jelang&#39;, &#39;staf&#39;: &#39;staf&#39;, &#39;angkatan&#39;: &#39;angkat&#39;, &#39;udara&#39;: &#39;udara&#39;, &#39;ksau&#39;: &#39;ksau&#39;, &#39;marsekal&#39;: &#39;marsekal&#39;, &#39;fadjar&#39;: &#39;fadjar&#39;, &#39;prasetyo&#39;: &#39;prasetyo&#39;, &#39;kunjungan&#39;: &#39;kunjung&#39;, &#39;nostalgia&#39;: &#39;nostalgia&#39;, &#39;australian&#39;: &#39;australian&#39;, &#39;defence&#39;: &#39;defence&#39;, &#39;college&#39;: &#39;college&#39;, &#39;adc&#39;: &#39;adc&#39;, &#39;alumnus&#39;: &#39;alumnus&#39;, &#39;perpanjang&#39;: &#39;panjang&#39;, &#39;penahanan&#39;: &#39;tahan&#39;, &#39;hakim&#39;: &#39;hakim&#39;, &#39;nonaktif&#39;: &#39;nonaktif&#39;, &#39;pengadilan&#39;: &#39;adil&#39;, &#39;negeri&#39;: &#39;negeri&#39;, &#39;pn&#39;: &#39;pn&#39;, &#39;surabaya&#39;: &#39;surabaya&#39;, &#39;itong&#39;: &#39;itong&#39;, &#39;isnaeni&#39;: &#39;isnaeni&#39;, &#39;hidayat&#39;: &#39;hidayat&#39;, &#39;iih&#39;: &#39;iih&#39;, &#39;pemerintah&#39;: &#39;perintah&#39;, &#39;kementerian&#39;: &#39;menteri&#39;, &#39;hukum&#39;: &#39;hukum&#39;, &#39;hak&#39;: &#39;hak&#39;, &#39;asasi&#39;: &#39;asasi&#39;, &#39;manusia&#39;: &#39;manusia&#39;, &#39;kemenkumham&#39;: &#39;kemenkumham&#39;, &#39;komitmen&#39;: &#39;komitmen&#39;, &#39;mendukung&#39;: &#39;dukung&#39;, &#39;pemulihan&#39;: &#39;pulih&#39;, &#39;ekonomi&#39;: &#39;ekonomi&#39;, &#39;upayaupaya&#39;: &#39;upayaupaya&#39;, &#39;mendorong&#39;: &#39;dorong&#39;, &#39;peningkatan&#39;: &#39;tingkat&#39;, &#39;potensi&#39;: &#39;potensi&#39;, &#39;kekayaan&#39;: &#39;kaya&#39;, &#39;intelektual&#39;: &#39;intelektual&#39;, &#39;ki&#39;: &#39;ki&#39;, &#39;kecelakaan&#39;: &#39;celaka&#39;, &#39;lintas&#39;: &#39;lintas&#39;, &#39;salah&#39;: &#39;salah&#39;, &#39;penyebab&#39;: &#39;sebab&#39;, &#39;meninggal&#39;: &#39;tinggal&#39;, &#39;dunia&#39;: &#39;dunia&#39;, &#39;terbesar&#39;: &#39;besar&#39;, &#39;berdasarkan&#39;: &#39;dasar&#39;, &#39;data&#39;: &#39;data&#39;, &#39;tahunnya&#39;: &#39;tahun&#39;, &#39;puluhan&#39;: &#39;puluh&#39;, &#39;ribu&#39;: &#39;ribu&#39;, &#39;nyawa&#39;: &#39;nyawa&#39;, &#39;melayang&#39;: &#39;layang&#39;, &#39;siasia&#39;: &#39;siasia&#39;, &#39;jalan&#39;: &#39;jalan&#39;, &#39;pengunduran&#39;: &#39;undur&#39;, &#39;rais&#39;: &#39;rais&#39;, &#39;aam&#39;: &#39;aam&#39;, &#39;pbnu&#39;: &#39;pbnu&#39;, &#39;miftachul&#39;: &#39;miftachul&#39;, &#39;akhyar&#39;: &#39;akhyar&#39;, &#39;jabatan&#39;: &#39;jabat&#39;, &#39;majelis&#39;: &#39;majelis&#39;, &#39;ulama&#39;: &#39;ulama&#39;, &#39;mui&#39;: &#39;mui&#39;, &#39;dinilai&#39;: &#39;nilai&#39;, &#39;representasi&#39;: &#39;representasi&#39;, &#39;nu&#39;: &#39;nu&#39;, &#39;pertemuan&#39;: &#39;temu&#39;, &#39;bilateral&#39;: &#39;bilateral&#39;, &#39;sehari&#39;: &#39;hari&#39;, &#39;air&#39;: &#39;air&#39;, &#39;and&#39;: &#39;and&#39;, &#39;space&#39;: &#39;space&#39;, &#39;power&#39;: &#39;power&#39;, &#39;conference&#39;: &#39;conference&#39;, &#39;national&#39;: &#39;national&#39;, &#39;convention&#39;: &#39;convention&#39;, &#39;centre&#39;: &#39;centre&#39;, &#39;canbera&#39;: &#39;canbera&#39;, &#39;senin&#39;: &#39;senin&#39;, &#39;mempersilakan&#39;: &#39;sila&#39;, &#39;badan&#39;: &#39;badan&#39;, &#39;pengawas&#39;: &#39;awas&#39;, &#39;bawaslu&#39;: &#39;bawaslu&#39;, &#39;memiliki&#39;: &#39;milik&#39;, &#39;rencana&#39;: &#39;rencana&#39;, &#39;menggugat&#39;: &#39;gugat&#39;, &#39;pkpu&#39;: &#39;pkpu&#39;, &#39;pendaftaran&#39;: &#39;daftar&#39;, &#39;partai&#39;: &#39;partai&#39;, &#39;calon&#39;: &#39;calon&#39;, &#39;peserta&#39;: &#39;serta&#39;, &#39;peristiwa&#39;: &#39;peristiwa&#39;, &#39;sejarah&#39;: &#39;sejarah&#39;, &#39;tanggal&#39;: &#39;tanggal&#39;, &#39;maret&#39;: &#39;maret&#39;, &#39;berdirinya&#39;: &#39;diri&#39;, &#39;liga&#39;: &#39;liga&#39;, &#39;arab&#39;: &#39;arab&#39;, &#39;menjadwalkan&#39;: &#39;jadwal&#39;, &#39;artis&#39;: &#39;artis&#39;, &#39;rizky&#39;: &#39;rizky&#39;, &#39;billar&#39;: &#39;billar&#39;, &#39;menjerat&#39;: &#39;jerat&#39;, &#39;doni&#39;: &#39;doni&#39;, &#39;salmanan&#39;: &#39;salmanan&#39;, &#39;sandiaga&#39;: &#39;sandiaga&#39;, &#39;kader&#39;: &#39;kader&#39;, &#39;gerindra&#39;: &#39;gerindra&#39;, &#39;bersamaan&#39;: &#39;sama&#39;, &#39;prabowo&#39;: &#39;prabowo&#39;, &#39;subianto&#39;: &#39;subianto&#39;, &#39;dijagokan&#39;: &#39;jago&#39;, &#39;capres&#39;: &#39;capres&#39;, &#39;dipelajari&#39;: &#39;ajar&#39;, &#39;konflik&#39;: &#39;konflik&#39;, &#39;rusiaukraina&#39;: &#39;rusiaukraina&#39;, &#39;perkembangan&#39;: &#39;kembang&#39;}
+------------------------
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "c44af11ae4914a8a8ad298eaeb46ee3d", "version_major": 2, "version_minor": 0}
+</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [fraksi, pks, dpr, ada, konsolidasi, nasional,...
+1     [isu, ombak, reshuffle, kabinet, cuat, muka, p...
+2     [komandan, korps, marinir, mayjen, tni, mar, w...
+3     [ketua, komisi, pilih, kpu, ilham, saputra, tu...
+4     [hadap, era, disrupsi, hadap, inovasi, manfaat...
+5     [kpk, selidik, ada, ektp, duga, rugi, uang, ne...
+6     [polri, ralat, nyata, kait, gilang, widya, pra...
+7     [akademisi, universitas, paramadina, yudi, lat...
+8     [komisi, pilih, kpu, gelar, simulasi, sederhan...
+9     [puncak, haul, kh, hasyim, muzadi, gelar, masj...
+10    [karo, penmas, divisi, humas, polri, brigjen, ...
+11    [sidik, komisi, berantas, korupsi, kpk, agenda...
+12    [kepala, pusat, lapor, analisis, transaksi, ua...
+13    [kepala, staf, angkat, udara, ksau, marsekal, ...
+14    [komisi, berantas, korupsi, kpk, panjang, taha...
+15    [perintah, menteri, hukum, hak, asasi, manusia...
+16    [celaka, lintas, salah, sebab, tinggal, dunia,...
+17    [undur, rais, aam, pbnu, kh, miftachul, akhyar...
+18    [marsekal, fadjar, temu, bilateral, hari, jela...
+19    [kpu, sila, badan, awas, milu, bawaslu, milik,...
+20    [peristiwa, sejarah, negeri, negeri, tanggal, ...
+21    [sidik, bareskrim, polri, jadwal, periksa, art...
+22    [sandiaga, kader, partai, gerindra, sama, ketu...
+23    [panglima, tni, jenderal, tni, andika, perkasa...
+Name: isi_stemmer, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wrp</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;hasilTextProcessing.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="frequency-distribution">
+<h1>Frequency Distribution<a class="headerlink" href="#frequency-distribution" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\lenovo\anaconda3\lib\site-packages (0.24.2)
+Requirement already satisfied: joblib&gt;=0.11 in c:\users\lenovo\anaconda3\lib\site-packages (from scikit-learn) (1.1.0)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\lenovo\anaconda3\lib\site-packages (from scikit-learn) (2.2.0)
+Requirement already satisfied: numpy&gt;=1.13.3 in c:\users\lenovo\anaconda3\lib\site-packages (from scikit-learn) (1.20.3)
+Requirement already satisfied: scipy&gt;=0.19.1 in c:\users\lenovo\anaconda3\lib\site-packages (from scikit-learn) (1.7.1)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span>
+
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_freq_dist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_stemmer&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">FreqDist</span><span class="p">)</span>
+<span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_freq_dist&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     {&#39;fraksi&#39;: 2, &#39;pks&#39;: 2, &#39;dpr&#39;: 1, &#39;ada&#39;: 1, &#39;k...
+1     {&#39;isu&#39;: 1, &#39;ombak&#39;: 1, &#39;reshuffle&#39;: 1, &#39;kabine...
+2     {&#39;komandan&#39;: 1, &#39;korps&#39;: 1, &#39;marinir&#39;: 1, &#39;may...
+3     {&#39;ketua&#39;: 1, &#39;komisi&#39;: 1, &#39;pilih&#39;: 1, &#39;kpu&#39;: 2...
+4     {&#39;hadap&#39;: 2, &#39;era&#39;: 1, &#39;disrupsi&#39;: 1, &#39;inovasi...
+5     {&#39;kpk&#39;: 1, &#39;selidik&#39;: 1, &#39;ada&#39;: 1, &#39;ektp&#39;: 1, ...
+6     {&#39;polri&#39;: 2, &#39;ralat&#39;: 1, &#39;nyata&#39;: 1, &#39;kait&#39;: 1...
+7     {&#39;akademisi&#39;: 1, &#39;universitas&#39;: 1, &#39;paramadina...
+8     {&#39;komisi&#39;: 1, &#39;pilih&#39;: 2, &#39;kpu&#39;: 2, &#39;gelar&#39;: 1...
+9     {&#39;puncak&#39;: 1, &#39;haul&#39;: 1, &#39;kh&#39;: 1, &#39;hasyim&#39;: 1,...
+10    {&#39;karo&#39;: 1, &#39;penmas&#39;: 1, &#39;divisi&#39;: 1, &#39;humas&#39;:...
+11    {&#39;sidik&#39;: 1, &#39;komisi&#39;: 1, &#39;berantas&#39;: 1, &#39;koru...
+12    {&#39;kepala&#39;: 1, &#39;pusat&#39;: 1, &#39;lapor&#39;: 1, &#39;analisi...
+13    {&#39;kepala&#39;: 1, &#39;staf&#39;: 1, &#39;angkat&#39;: 1, &#39;udara&#39;:...
+14    {&#39;komisi&#39;: 1, &#39;berantas&#39;: 1, &#39;korupsi&#39;: 1, &#39;kp...
+15    {&#39;perintah&#39;: 1, &#39;menteri&#39;: 1, &#39;hukum&#39;: 1, &#39;hak...
+16    {&#39;celaka&#39;: 1, &#39;lintas&#39;: 1, &#39;salah&#39;: 1, &#39;sebab&#39;...
+17    {&#39;undur&#39;: 1, &#39;rais&#39;: 1, &#39;aam&#39;: 1, &#39;pbnu&#39;: 1, &#39;...
+18    {&#39;marsekal&#39;: 1, &#39;fadjar&#39;: 1, &#39;temu&#39;: 1, &#39;bilat...
+19    {&#39;kpu&#39;: 1, &#39;sila&#39;: 1, &#39;badan&#39;: 1, &#39;awas&#39;: 1, &#39;...
+20    {&#39;peristiwa&#39;: 1, &#39;sejarah&#39;: 1, &#39;negeri&#39;: 2, &#39;t...
+21    {&#39;sidik&#39;: 1, &#39;bareskrim&#39;: 1, &#39;polri&#39;: 1, &#39;jadw...
+22    {&#39;sandiaga&#39;: 1, &#39;kader&#39;: 1, &#39;partai&#39;: 2, &#39;geri...
+23    {&#39;panglima&#39;: 1, &#39;tni&#39;: 2, &#39;jenderal&#39;: 1, &#39;andi...
+Name: isi_freq_dist, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wrp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Topik</th>
+      <th>Tanggal</th>
+      <th>Judul</th>
+      <th>isi</th>
+      <th>isi_tokenisasi</th>
+      <th>isi_stopword</th>
+      <th>isi_stemmer</th>
+      <th>isi_freq_dist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Politik</td>
+      <td>Selasa, 22 Maret 2022 - 14:26 WIB</td>
+      <td>Hadapi Pemilu 2024, PKS Gelar Konsolidasi Pimp...</td>
+      <td>fraksi pks dpr akan mengadakan konsolidasi nas...</td>
+      <td>[fraksi, pks, dpr, akan, mengadakan, konsolida...</td>
+      <td>[fraksi, pks, dpr, mengadakan, konsolidasi, na...</td>
+      <td>[fraksi, pks, dpr, ada, konsolidasi, nasional,...</td>
+      <td>{'fraksi': 2, 'pks': 2, 'dpr': 1, 'ada': 1, 'k...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Politik</td>
+      <td>Selasa, 22 Maret 2022 - 14:10 WIB</td>
+      <td>Isu Reshuffle Mencuat, Gerindra Beri Respons B...</td>
+      <td>isu perombakan reshuffle kabinet kembali mencu...</td>
+      <td>[isu, perombakan, reshuffle, kabinet, kembali,...</td>
+      <td>[isu, perombakan, reshuffle, kabinet, mencuat,...</td>
+      <td>[isu, ombak, reshuffle, kabinet, cuat, muka, p...</td>
+      <td>{'isu': 1, 'ombak': 1, 'reshuffle': 1, 'kabine...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Hankam</td>
+      <td>Selasa, 22 Maret 2022 - 14:02 WIB</td>
+      <td>Jenderal Andika Akan Diangkat Jadi Warga Kehor...</td>
+      <td>komandan korps marinir mayjen tni mar widodo d...</td>
+      <td>[komandan, korps, marinir, mayjen, tni, mar, w...</td>
+      <td>[komandan, korps, marinir, mayjen, tni, mar, w...</td>
+      <td>[komandan, korps, marinir, mayjen, tni, mar, w...</td>
+      <td>{'komandan': 1, 'korps': 1, 'marinir': 1, 'may...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Hankam</td>
+      <td>Selasa, 22 Maret 2022 - 13:45 WIB</td>
+      <td>KPU Kembali Tegaskan Tidak Ada Penundaan Pemil...</td>
+      <td>ketua komisi pemilihan umum kpu ilham saputra ...</td>
+      <td>[ketua, komisi, pemilihan, umum, kpu, ilham, s...</td>
+      <td>[ketua, komisi, pemilihan, kpu, ilham, saputra...</td>
+      <td>[ketua, komisi, pilih, kpu, ilham, saputra, tu...</td>
+      <td>{'ketua': 1, 'komisi': 1, 'pilih': 1, 'kpu': 2...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Opini</td>
+      <td>Selasa, 22 Maret 2022 - 13:42 WIB</td>
+      <td>Mengenal Komunikasi Pemasaran Jasa di Era Disr...</td>
+      <td>menghadapi era disrupsi tentu tidak hanya diha...</td>
+      <td>[menghadapi, era, disrupsi, tentu, tidak, hany...</td>
+      <td>[menghadapi, era, disrupsi, dihadapkan, inovas...</td>
+      <td>[hadap, era, disrupsi, hadap, inovasi, manfaat...</td>
+      <td>{'hadap': 2, 'era': 1, 'disrupsi': 1, 'inovasi...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wrp</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;hasilTextProcessing.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="text-frequency-table">
+<h1>Text Frequency Table<a class="headerlink" href="#text-frequency-table" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tf_table</span> <span class="o">=</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_freq_dist&#39;</span><span class="p">]</span>
+<span class="n">tf_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tf_table</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#bentuk aljabar</span>
+<span class="n">tf_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fraksi</th>
+      <th>pks</th>
+      <th>dpr</th>
+      <th>ada</th>
+      <th>konsolidasi</th>
+      <th>nasional</th>
+      <th>pimpin</th>
+      <th>dprd</th>
+      <th>indonesia</th>
+      <th>mantap</th>
+      <th>...</th>
+      <th>gerindra</th>
+      <th>sama</th>
+      <th>prabowo</th>
+      <th>subianto</th>
+      <th>jago</th>
+      <th>capres</th>
+      <th>ajar</th>
+      <th>konflik</th>
+      <th>rusiaukraina</th>
+      <th>kembang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>24 rows × 273 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wrp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Topik</th>
+      <th>Tanggal</th>
+      <th>Judul</th>
+      <th>isi</th>
+      <th>isi_tokenisasi</th>
+      <th>isi_stopword</th>
+      <th>isi_stemmer</th>
+      <th>isi_freq_dist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Politik</td>
+      <td>Selasa, 22 Maret 2022 - 14:26 WIB</td>
+      <td>Hadapi Pemilu 2024, PKS Gelar Konsolidasi Pimp...</td>
+      <td>fraksi pks dpr akan mengadakan konsolidasi nas...</td>
+      <td>[fraksi, pks, dpr, akan, mengadakan, konsolida...</td>
+      <td>[fraksi, pks, dpr, mengadakan, konsolidasi, na...</td>
+      <td>[fraksi, pks, dpr, ada, konsolidasi, nasional,...</td>
+      <td>{'fraksi': 2, 'pks': 2, 'dpr': 1, 'ada': 1, 'k...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Politik</td>
+      <td>Selasa, 22 Maret 2022 - 14:10 WIB</td>
+      <td>Isu Reshuffle Mencuat, Gerindra Beri Respons B...</td>
+      <td>isu perombakan reshuffle kabinet kembali mencu...</td>
+      <td>[isu, perombakan, reshuffle, kabinet, kembali,...</td>
+      <td>[isu, perombakan, reshuffle, kabinet, mencuat,...</td>
+      <td>[isu, ombak, reshuffle, kabinet, cuat, muka, p...</td>
+      <td>{'isu': 1, 'ombak': 1, 'reshuffle': 1, 'kabine...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Hankam</td>
+      <td>Selasa, 22 Maret 2022 - 14:02 WIB</td>
+      <td>Jenderal Andika Akan Diangkat Jadi Warga Kehor...</td>
+      <td>komandan korps marinir mayjen tni mar widodo d...</td>
+      <td>[komandan, korps, marinir, mayjen, tni, mar, w...</td>
+      <td>[komandan, korps, marinir, mayjen, tni, mar, w...</td>
+      <td>[komandan, korps, marinir, mayjen, tni, mar, w...</td>
+      <td>{'komandan': 1, 'korps': 1, 'marinir': 1, 'may...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Hankam</td>
+      <td>Selasa, 22 Maret 2022 - 13:45 WIB</td>
+      <td>KPU Kembali Tegaskan Tidak Ada Penundaan Pemil...</td>
+      <td>ketua komisi pemilihan umum kpu ilham saputra ...</td>
+      <td>[ketua, komisi, pemilihan, umum, kpu, ilham, s...</td>
+      <td>[ketua, komisi, pemilihan, kpu, ilham, saputra...</td>
+      <td>[ketua, komisi, pilih, kpu, ilham, saputra, tu...</td>
+      <td>{'ketua': 1, 'komisi': 1, 'pilih': 1, 'kpu': 2...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Opini</td>
+      <td>Selasa, 22 Maret 2022 - 13:42 WIB</td>
+      <td>Mengenal Komunikasi Pemasaran Jasa di Era Disr...</td>
+      <td>menghadapi era disrupsi tentu tidak hanya diha...</td>
+      <td>[menghadapi, era, disrupsi, tentu, tidak, hany...</td>
+      <td>[menghadapi, era, disrupsi, dihadapkan, inovas...</td>
+      <td>[hadap, era, disrupsi, hadap, inovasi, manfaat...</td>
+      <td>{'hadap': 2, 'era': 1, 'disrupsi': 1, 'inovasi...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="analize">
+<h1>Analize<a class="headerlink" href="#analize" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="o">.</span> <span class="n">join</span><span class="p">(</span><span class="n">wrp</span><span class="p">)</span> <span class="k">for</span> <span class="n">wrp</span> <span class="ow">in</span> <span class="n">wrp</span><span class="p">[</span><span class="s1">&#39;isi_stemmer&#39;</span><span class="p">]]</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;fraksi pks dpr ada konsolidasi nasional pimpin fraksi pks dprd indonesia mantap kerja milu&#39;,
+ &#39;isu ombak reshuffle kabinet cuat muka publik kabar presiden jokowi kocok ulang kabinet rabu&#39;,
+ &#39;komandan korps marinir mayjen tni mar widodo dwi purwanto lantik februari hadap panglima tni jenderal andika perkasa mabes tni&#39;,
+ &#39;ketua komisi pilih kpu ilham saputra tunda milu kpu lanjut tahap milu sesuai jadwal&#39;,
+ &#39;hadap era disrupsi hadap inovasi manfaat teknologi bisnis jasa mampu adaptasi&#39;,
+ &#39;kpk selidik ada ektp duga rugi uang negara triliun rupiah perum cetak negara republik indonesia pnri&#39;,
+ &#39;polri ralat nyata kait gilang widya pramana juragan lapor bareskrim polri duga tipu jahat rahasia dagang&#39;,
+ &#39;akademisi universitas paramadina yudi latif indonesia sistem demokrasi sungguh demokrasi prosedural rusak milu tunda&#39;,
+ &#39;komisi pilih kpu gelar simulasi sederhana surat suara pilih milu halaman kantor kpu ri jakarta selasa&#39;,
+ &#39;puncak haul kh hasyim muzadi gelar masjid pesantren alhikam depok jawa barat minggu&#39;,
+ &#39;karo penmas divisi humas polri brigjen pol ahmad ramadhan gilang widya pramana kenal juragan lapor bareskrim&#39;,
+ &#39;sidik komisi berantas korupsi kpk agenda periksa mantan ketua ppp romahurmuziy selasa&#39;,
+ &#39;kepala pusat lapor analisis transaksi uang ppatk ivan yustiavandana antisipasi money politics politik uang jelang milu&#39;,
+ &#39;kepala staf angkat udara ksau marsekal tni fadjar prasetyo kunjung nostalgia australian defence college adc alumnus&#39;,
+ &#39;komisi berantas korupsi kpk panjang tahan hakim nonaktif adil negeri pn surabaya itong isnaeni hidayat iih&#39;,
+ &#39;perintah menteri hukum hak asasi manusia kemenkumham komitmen dukung pulih ekonomi nasional upayaupaya dorong tingkat potensi kaya intelektual ki&#39;,
+ &#39;celaka lintas salah sebab tinggal dunia besar indonesia dunia dasar data tahun puluh ribu nyawa layang siasia jalan&#39;,
+ &#39;undur rais aam pbnu kh miftachul akhyar jabat ketua majelis ulama indonesia mui pusat nilai representasi nu&#39;,
+ &#39;marsekal fadjar temu bilateral hari jelang air and space power conference national convention centre canbera senin&#39;,
+ &#39;kpu sila badan awas milu bawaslu milik rencana gugat pkpu daftar partai politik calon serta milu&#39;,
+ &#39;peristiwa sejarah negeri negeri tanggal maret diri liga arab&#39;,
+ &#39;sidik bareskrim polri jadwal periksa artis rizky billar kait duga tipu jerat doni salmanan&#39;,
+ &#39;sandiaga kader partai gerindra sama ketua partai gerindra prabowo subianto jago capres&#39;,
+ &#39;panglima tni jenderal tni andika perkasa ajar konflik rusiaukraina kembang&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tf">
+<h1>TF<a class="headerlink" href="#tf" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+<span class="n">idf</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bag</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;fraksi&#39;: 66,
+ &#39;pks&#39;: 185,
+ &#39;dpr&#39;: 55,
+ &#39;ada&#39;: 1,
+ &#39;konsolidasi&#39;: 123,
+ &#39;nasional&#39;: 159,
+ &#39;pimpin&#39;: 183,
+ &#39;dprd&#39;: 56,
+ &#39;indonesia&#39;: 83,
+ &#39;mantap&#39;: 142,
+ &#39;kerja&#39;: 114,
+ &#39;milu&#39;: 153,
+ &#39;isu&#39;: 87,
+ &#39;ombak&#39;: 169,
+ &#39;reshuffle&#39;: 215,
+ &#39;kabinet&#39;: 104,
+ &#39;cuat&#39;: 42,
+ &#39;muka&#39;: 157,
+ &#39;publik&#39;: 201,
+ &#39;kabar&#39;: 103,
+ &#39;presiden&#39;: 199,
+ &#39;jokowi&#39;: 101,
+ &#39;kocok&#39;: 118,
+ &#39;ulang&#39;: 265,
+ &#39;rabu&#39;: 207,
+ &#39;komandan&#39;: 119,
+ &#39;korps&#39;: 124,
+ &#39;marinir&#39;: 146,
+ &#39;mayjen&#39;: 149,
+ &#39;tni&#39;: 258,
+ &#39;mar&#39;: 144,
+ &#39;widodo&#39;: 269,
+ &#39;dwi&#39;: 60,
+ &#39;purwanto&#39;: 205,
+ &#39;lantik&#39;: 131,
+ &#39;februari&#39;: 65,
+ &#39;hadap&#39;: 71,
+ &#39;panglima&#39;: 170,
+ &#39;jenderal&#39;: 99,
+ &#39;andika&#39;: 15,
+ &#39;perkasa&#39;: 179,
+ &#39;mabes&#39;: 137,
+ &#39;ketua&#39;: 115,
+ &#39;komisi&#39;: 120,
+ &#39;pilih&#39;: 182,
+ &#39;kpu&#39;: 127,
+ &#39;ilham&#39;: 82,
+ &#39;saputra&#39;: 228,
+ &#39;tunda&#39;: 261,
+ &#39;lanjut&#39;: 130,
+ &#39;tahap&#39;: 250,
+ &#39;sesuai&#39;: 236,
+ &#39;jadwal&#39;: 91,
+ &#39;era&#39;: 63,
+ &#39;disrupsi&#39;: 51,
+ &#39;inovasi&#39;: 84,
+ &#39;manfaat&#39;: 140,
+ &#39;teknologi&#39;: 253,
+ &#39;bisnis&#39;: 31,
+ &#39;jasa&#39;: 96,
+ &#39;mampu&#39;: 139,
+ &#39;adaptasi&#39;: 2,
+ &#39;kpk&#39;: 126,
+ &#39;selidik&#39;: 233,
+ &#39;ektp&#39;: 62,
+ &#39;duga&#39;: 57,
+ &#39;rugi&#39;: 220,
+ &#39;uang&#39;: 262,
+ &#39;negara&#39;: 161,
+ &#39;triliun&#39;: 260,
+ &#39;rupiah&#39;: 221,
+ &#39;perum&#39;: 180,
+ &#39;cetak&#39;: 38,
+ &#39;republik&#39;: 214,
+ &#39;pnri&#39;: 187,
+ &#39;polri&#39;: 191,
+ &#39;ralat&#39;: 210,
+ &#39;nyata&#39;: 167,
+ &#39;kait&#39;: 106,
+ &#39;gilang&#39;: 69,
+ &#39;widya&#39;: 270,
+ &#39;pramana&#39;: 197,
+ &#39;juragan&#39;: 102,
+ &#39;lapor&#39;: 132,
+ &#39;bareskrim&#39;: 25,
+ &#39;tipu&#39;: 257,
+ &#39;jahat&#39;: 93,
+ &#39;rahasia&#39;: 208,
+ &#39;dagang&#39;: 44,
+ &#39;akademisi&#39;: 9,
+ &#39;universitas&#39;: 267,
+ &#39;paramadina&#39;: 172,
+ &#39;yudi&#39;: 271,
+ &#39;latif&#39;: 133,
+ &#39;sistem&#39;: 241,
+ &#39;demokrasi&#39;: 48,
+ &#39;sungguh&#39;: 246,
+ &#39;prosedural&#39;: 200,
+ &#39;rusak&#39;: 222,
+ &#39;gelar&#39;: 67,
+ &#39;simulasi&#39;: 240,
+ &#39;sederhana&#39;: 230,
+ &#39;surat&#39;: 248,
+ &#39;suara&#39;: 244,
+ &#39;halaman&#39;: 74,
+ &#39;kantor&#39;: 107,
+ &#39;ri&#39;: 216,
+ &#39;jakarta&#39;: 94,
+ &#39;selasa&#39;: 232,
+ &#39;puncak&#39;: 204,
+ &#39;haul&#39;: 77,
+ &#39;kh&#39;: 116,
+ &#39;hasyim&#39;: 76,
+ &#39;muzadi&#39;: 158,
+ &#39;masjid&#39;: 148,
+ &#39;pesantren&#39;: 181,
+ &#39;alhikam&#39;: 11,
+ &#39;depok&#39;: 49,
+ &#39;jawa&#39;: 97,
+ &#39;barat&#39;: 24,
+ &#39;minggu&#39;: 154,
+ &#39;karo&#39;: 108,
+ &#39;penmas&#39;: 175,
+ &#39;divisi&#39;: 52,
+ &#39;humas&#39;: 80,
+ &#39;brigjen&#39;: 32,
+ &#39;pol&#39;: 188,
+ &#39;ahmad&#39;: 6,
+ &#39;ramadhan&#39;: 211,
+ &#39;kenal&#39;: 112,
+ &#39;sidik&#39;: 238,
+ &#39;berantas&#39;: 27,
+ &#39;korupsi&#39;: 125,
+ &#39;agenda&#39;: 5,
+ &#39;periksa&#39;: 176,
+ &#39;mantan&#39;: 141,
+ &#39;ppp&#39;: 195,
+ &#39;romahurmuziy&#39;: 219,
+ &#39;kepala&#39;: 113,
+ &#39;pusat&#39;: 206,
+ &#39;analisis&#39;: 13,
+ &#39;transaksi&#39;: 259,
+ &#39;ppatk&#39;: 194,
+ &#39;ivan&#39;: 89,
+ &#39;yustiavandana&#39;: 272,
+ &#39;antisipasi&#39;: 17,
+ &#39;money&#39;: 155,
+ &#39;politics&#39;: 189,
+ &#39;politik&#39;: 190,
+ &#39;jelang&#39;: 98,
+ &#39;staf&#39;: 243,
+ &#39;angkat&#39;: 16,
+ &#39;udara&#39;: 263,
+ &#39;ksau&#39;: 128,
+ &#39;marsekal&#39;: 147,
+ &#39;fadjar&#39;: 64,
+ &#39;prasetyo&#39;: 198,
+ &#39;kunjung&#39;: 129,
+ &#39;nostalgia&#39;: 165,
+ &#39;australian&#39;: 21,
+ &#39;defence&#39;: 47,
+ &#39;college&#39;: 39,
+ &#39;adc&#39;: 3,
+ &#39;alumnus&#39;: 12,
+ &#39;panjang&#39;: 171,
+ &#39;tahan&#39;: 249,
+ &#39;hakim&#39;: 73,
+ &#39;nonaktif&#39;: 164,
+ &#39;adil&#39;: 4,
+ &#39;negeri&#39;: 162,
+ &#39;pn&#39;: 186,
+ &#39;surabaya&#39;: 247,
+ &#39;itong&#39;: 88,
+ &#39;isnaeni&#39;: 86,
+ &#39;hidayat&#39;: 78,
+ &#39;iih&#39;: 81,
+ &#39;perintah&#39;: 177,
+ &#39;menteri&#39;: 150,
+ &#39;hukum&#39;: 79,
+ &#39;hak&#39;: 72,
+ &#39;asasi&#39;: 20,
+ &#39;manusia&#39;: 143,
+ &#39;kemenkumham&#39;: 111,
+ &#39;komitmen&#39;: 121,
+ &#39;dukung&#39;: 58,
+ &#39;pulih&#39;: 202,
+ &#39;ekonomi&#39;: 61,
+ &#39;upayaupaya&#39;: 268,
+ &#39;dorong&#39;: 54,
+ &#39;tingkat&#39;: 256,
+ &#39;potensi&#39;: 192,
+ &#39;kaya&#39;: 109,
+ &#39;intelektual&#39;: 85,
+ &#39;ki&#39;: 117,
+ &#39;celaka&#39;: 36,
+ &#39;lintas&#39;: 136,
+ &#39;salah&#39;: 224,
+ &#39;sebab&#39;: 229,
+ &#39;tinggal&#39;: 255,
+ &#39;dunia&#39;: 59,
+ &#39;besar&#39;: 28,
+ &#39;dasar&#39;: 45,
+ &#39;data&#39;: 46,
+ &#39;tahun&#39;: 251,
+ &#39;puluh&#39;: 203,
+ &#39;ribu&#39;: 217,
+ &#39;nyawa&#39;: 168,
+ &#39;layang&#39;: 134,
+ &#39;siasia&#39;: 237,
+ &#39;jalan&#39;: 95,
+ &#39;undur&#39;: 266,
+ &#39;rais&#39;: 209,
+ &#39;aam&#39;: 0,
+ &#39;pbnu&#39;: 174,
+ &#39;miftachul&#39;: 151,
+ &#39;akhyar&#39;: 10,
+ &#39;jabat&#39;: 90,
+ &#39;majelis&#39;: 138,
+ &#39;ulama&#39;: 264,
+ &#39;mui&#39;: 156,
+ &#39;nilai&#39;: 163,
+ &#39;representasi&#39;: 213,
+ &#39;nu&#39;: 166,
+ &#39;temu&#39;: 254,
+ &#39;bilateral&#39;: 29,
+ &#39;hari&#39;: 75,
+ &#39;air&#39;: 7,
+ &#39;and&#39;: 14,
+ &#39;space&#39;: 242,
+ &#39;power&#39;: 193,
+ &#39;conference&#39;: 40,
+ &#39;national&#39;: 160,
+ &#39;convention&#39;: 41,
+ &#39;centre&#39;: 37,
+ &#39;canbera&#39;: 34,
+ &#39;senin&#39;: 234,
+ &#39;sila&#39;: 239,
+ &#39;badan&#39;: 23,
+ &#39;awas&#39;: 22,
+ &#39;bawaslu&#39;: 26,
+ &#39;milik&#39;: 152,
+ &#39;rencana&#39;: 212,
+ &#39;gugat&#39;: 70,
+ &#39;pkpu&#39;: 184,
+ &#39;daftar&#39;: 43,
+ &#39;partai&#39;: 173,
+ &#39;calon&#39;: 33,
+ &#39;serta&#39;: 235,
+ &#39;peristiwa&#39;: 178,
+ &#39;sejarah&#39;: 231,
+ &#39;tanggal&#39;: 252,
+ &#39;maret&#39;: 145,
+ &#39;diri&#39;: 50,
+ &#39;liga&#39;: 135,
+ &#39;arab&#39;: 18,
+ &#39;artis&#39;: 19,
+ &#39;rizky&#39;: 218,
+ &#39;billar&#39;: 30,
+ &#39;jerat&#39;: 100,
+ &#39;doni&#39;: 53,
+ &#39;salmanan&#39;: 225,
+ &#39;sandiaga&#39;: 227,
+ &#39;kader&#39;: 105,
+ &#39;gerindra&#39;: 68,
+ &#39;sama&#39;: 226,
+ &#39;prabowo&#39;: 196,
+ &#39;subianto&#39;: 245,
+ &#39;jago&#39;: 92,
+ &#39;capres&#39;: 35,
+ &#39;ajar&#39;: 8,
+ &#39;konflik&#39;: 122,
+ &#39;rusiaukraina&#39;: 223,
+ &#39;kembang&#39;: 110}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="idf">
+<h1>IDF<a class="headerlink" href="#idf" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">idf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">idf</span><span class="o">.</span><span class="n">idf_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.52572864, 3.12026354, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.12026354, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       2.83258146, 3.52572864, 3.12026354, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 2.83258146, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.12026354,
+       3.52572864, 3.52572864, 3.12026354, 3.52572864, 3.12026354,
+       3.52572864, 3.12026354, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 2.42711636, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.12026354, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.12026354, 3.12026354,
+       3.52572864, 3.52572864, 3.12026354, 3.52572864, 3.52572864,
+       3.52572864, 3.12026354, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.12026354, 3.52572864,
+       2.60943791, 3.12026354, 3.52572864, 3.52572864, 3.52572864,
+       2.60943791, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.12026354, 2.83258146, 2.83258146, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 2.83258146, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.12026354, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 2.27296568, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.12026354,
+       3.52572864, 3.52572864, 3.12026354, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.12026354, 3.52572864, 3.52572864, 3.12026354, 3.52572864,
+       3.52572864, 3.12026354, 3.52572864, 3.52572864, 3.12026354,
+       3.52572864, 3.52572864, 3.12026354, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.12026354, 2.83258146, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.12026354, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.12026354, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.12026354, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.12026354, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.12026354, 2.83258146, 3.52572864,
+       3.52572864, 3.12026354, 3.12026354, 3.52572864, 3.52572864,
+       3.52572864, 3.52572864, 3.52572864, 3.52572864, 3.52572864,
+       3.12026354, 3.52572864, 3.52572864])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (0, 153)	0.1589214385516271
+  (0, 114)	0.24651224347932982
+  (0, 142)	0.24651224347932982
+  (0, 83)	0.16969936100445865
+  (0, 56)	0.24651224347932982
+  (0, 183)	0.24651224347932982
+  (0, 159)	0.21816289401544245
+  (0, 123)	0.24651224347932982
+  (0, 1)	0.21816289401544245
+  (0, 55)	0.24651224347932982
+  (0, 185)	0.49302448695865964
+  (0, 66)	0.49302448695865964
+  (1, 207)	0.25000000000000006
+  (1, 265)	0.25000000000000006
+  (1, 118)	0.25000000000000006
+  (1, 101)	0.25000000000000006
+  (1, 199)	0.25000000000000006
+  (1, 103)	0.25000000000000006
+  (1, 201)	0.25000000000000006
+  (1, 157)	0.25000000000000006
+  (1, 42)	0.25000000000000006
+  (1, 104)	0.5000000000000001
+  (1, 215)	0.25000000000000006
+  (1, 169)	0.25000000000000006
+  (1, 87)	0.25000000000000006
+  :	:
+  (21, 257)	0.25706194856004133
+  (21, 25)	0.23336134979577608
+  (21, 106)	0.25706194856004133
+  (21, 191)	0.23336134979577608
+  (21, 57)	0.23336134979577608
+  (21, 91)	0.25706194856004133
+  (22, 35)	0.2609920556495093
+  (22, 92)	0.2609920556495093
+  (22, 245)	0.2609920556495093
+  (22, 196)	0.2609920556495093
+  (22, 226)	0.2609920556495093
+  (22, 68)	0.5219841112990186
+  (22, 105)	0.2609920556495093
+  (22, 227)	0.2609920556495093
+  (22, 173)	0.46195500371007486
+  (22, 115)	0.193163636105512
+  (23, 110)	0.3208374057117666
+  (23, 223)	0.3208374057117666
+  (23, 122)	0.3208374057117666
+  (23, 8)	0.3208374057117666
+  (23, 179)	0.2839405294867423
+  (23, 15)	0.2839405294867423
+  (23, 99)	0.2839405294867423
+  (23, 170)	0.2839405294867423
+  (23, 258)	0.515523558378981
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tfidf</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;aam&#39;,
+ &#39;ada&#39;,
+ &#39;adaptasi&#39;,
+ &#39;adc&#39;,
+ &#39;adil&#39;,
+ &#39;agenda&#39;,
+ &#39;ahmad&#39;,
+ &#39;air&#39;,
+ &#39;ajar&#39;,
+ &#39;akademisi&#39;,
+ &#39;akhyar&#39;,
+ &#39;alhikam&#39;,
+ &#39;alumnus&#39;,
+ &#39;analisis&#39;,
+ &#39;and&#39;,
+ &#39;andika&#39;,
+ &#39;angkat&#39;,
+ &#39;antisipasi&#39;,
+ &#39;arab&#39;,
+ &#39;artis&#39;,
+ &#39;asasi&#39;,
+ &#39;australian&#39;,
+ &#39;awas&#39;,
+ &#39;badan&#39;,
+ &#39;barat&#39;,
+ &#39;bareskrim&#39;,
+ &#39;bawaslu&#39;,
+ &#39;berantas&#39;,
+ &#39;besar&#39;,
+ &#39;bilateral&#39;,
+ &#39;billar&#39;,
+ &#39;bisnis&#39;,
+ &#39;brigjen&#39;,
+ &#39;calon&#39;,
+ &#39;canbera&#39;,
+ &#39;capres&#39;,
+ &#39;celaka&#39;,
+ &#39;centre&#39;,
+ &#39;cetak&#39;,
+ &#39;college&#39;,
+ &#39;conference&#39;,
+ &#39;convention&#39;,
+ &#39;cuat&#39;,
+ &#39;daftar&#39;,
+ &#39;dagang&#39;,
+ &#39;dasar&#39;,
+ &#39;data&#39;,
+ &#39;defence&#39;,
+ &#39;demokrasi&#39;,
+ &#39;depok&#39;,
+ &#39;diri&#39;,
+ &#39;disrupsi&#39;,
+ &#39;divisi&#39;,
+ &#39;doni&#39;,
+ &#39;dorong&#39;,
+ &#39;dpr&#39;,
+ &#39;dprd&#39;,
+ &#39;duga&#39;,
+ &#39;dukung&#39;,
+ &#39;dunia&#39;,
+ &#39;dwi&#39;,
+ &#39;ekonomi&#39;,
+ &#39;ektp&#39;,
+ &#39;era&#39;,
+ &#39;fadjar&#39;,
+ &#39;februari&#39;,
+ &#39;fraksi&#39;,
+ &#39;gelar&#39;,
+ &#39;gerindra&#39;,
+ &#39;gilang&#39;,
+ &#39;gugat&#39;,
+ &#39;hadap&#39;,
+ &#39;hak&#39;,
+ &#39;hakim&#39;,
+ &#39;halaman&#39;,
+ &#39;hari&#39;,
+ &#39;hasyim&#39;,
+ &#39;haul&#39;,
+ &#39;hidayat&#39;,
+ &#39;hukum&#39;,
+ &#39;humas&#39;,
+ &#39;iih&#39;,
+ &#39;ilham&#39;,
+ &#39;indonesia&#39;,
+ &#39;inovasi&#39;,
+ &#39;intelektual&#39;,
+ &#39;isnaeni&#39;,
+ &#39;isu&#39;,
+ &#39;itong&#39;,
+ &#39;ivan&#39;,
+ &#39;jabat&#39;,
+ &#39;jadwal&#39;,
+ &#39;jago&#39;,
+ &#39;jahat&#39;,
+ &#39;jakarta&#39;,
+ &#39;jalan&#39;,
+ &#39;jasa&#39;,
+ &#39;jawa&#39;,
+ &#39;jelang&#39;,
+ &#39;jenderal&#39;,
+ &#39;jerat&#39;,
+ &#39;jokowi&#39;,
+ &#39;juragan&#39;,
+ &#39;kabar&#39;,
+ &#39;kabinet&#39;,
+ &#39;kader&#39;,
+ &#39;kait&#39;,
+ &#39;kantor&#39;,
+ &#39;karo&#39;,
+ &#39;kaya&#39;,
+ &#39;kembang&#39;,
+ &#39;kemenkumham&#39;,
+ &#39;kenal&#39;,
+ &#39;kepala&#39;,
+ &#39;kerja&#39;,
+ &#39;ketua&#39;,
+ &#39;kh&#39;,
+ &#39;ki&#39;,
+ &#39;kocok&#39;,
+ &#39;komandan&#39;,
+ &#39;komisi&#39;,
+ &#39;komitmen&#39;,
+ &#39;konflik&#39;,
+ &#39;konsolidasi&#39;,
+ &#39;korps&#39;,
+ &#39;korupsi&#39;,
+ &#39;kpk&#39;,
+ &#39;kpu&#39;,
+ &#39;ksau&#39;,
+ &#39;kunjung&#39;,
+ &#39;lanjut&#39;,
+ &#39;lantik&#39;,
+ &#39;lapor&#39;,
+ &#39;latif&#39;,
+ &#39;layang&#39;,
+ &#39;liga&#39;,
+ &#39;lintas&#39;,
+ &#39;mabes&#39;,
+ &#39;majelis&#39;,
+ &#39;mampu&#39;,
+ &#39;manfaat&#39;,
+ &#39;mantan&#39;,
+ &#39;mantap&#39;,
+ &#39;manusia&#39;,
+ &#39;mar&#39;,
+ &#39;maret&#39;,
+ &#39;marinir&#39;,
+ &#39;marsekal&#39;,
+ &#39;masjid&#39;,
+ &#39;mayjen&#39;,
+ &#39;menteri&#39;,
+ &#39;miftachul&#39;,
+ &#39;milik&#39;,
+ &#39;milu&#39;,
+ &#39;minggu&#39;,
+ &#39;money&#39;,
+ &#39;mui&#39;,
+ &#39;muka&#39;,
+ &#39;muzadi&#39;,
+ &#39;nasional&#39;,
+ &#39;national&#39;,
+ &#39;negara&#39;,
+ &#39;negeri&#39;,
+ &#39;nilai&#39;,
+ &#39;nonaktif&#39;,
+ &#39;nostalgia&#39;,
+ &#39;nu&#39;,
+ &#39;nyata&#39;,
+ &#39;nyawa&#39;,
+ &#39;ombak&#39;,
+ &#39;panglima&#39;,
+ &#39;panjang&#39;,
+ &#39;paramadina&#39;,
+ &#39;partai&#39;,
+ &#39;pbnu&#39;,
+ &#39;penmas&#39;,
+ &#39;periksa&#39;,
+ &#39;perintah&#39;,
+ &#39;peristiwa&#39;,
+ &#39;perkasa&#39;,
+ &#39;perum&#39;,
+ &#39;pesantren&#39;,
+ &#39;pilih&#39;,
+ &#39;pimpin&#39;,
+ &#39;pkpu&#39;,
+ &#39;pks&#39;,
+ &#39;pn&#39;,
+ &#39;pnri&#39;,
+ &#39;pol&#39;,
+ &#39;politics&#39;,
+ &#39;politik&#39;,
+ &#39;polri&#39;,
+ &#39;potensi&#39;,
+ &#39;power&#39;,
+ &#39;ppatk&#39;,
+ &#39;ppp&#39;,
+ &#39;prabowo&#39;,
+ &#39;pramana&#39;,
+ &#39;prasetyo&#39;,
+ &#39;presiden&#39;,
+ &#39;prosedural&#39;,
+ &#39;publik&#39;,
+ &#39;pulih&#39;,
+ &#39;puluh&#39;,
+ &#39;puncak&#39;,
+ &#39;purwanto&#39;,
+ &#39;pusat&#39;,
+ &#39;rabu&#39;,
+ &#39;rahasia&#39;,
+ &#39;rais&#39;,
+ &#39;ralat&#39;,
+ &#39;ramadhan&#39;,
+ &#39;rencana&#39;,
+ &#39;representasi&#39;,
+ &#39;republik&#39;,
+ &#39;reshuffle&#39;,
+ &#39;ri&#39;,
+ &#39;ribu&#39;,
+ &#39;rizky&#39;,
+ &#39;romahurmuziy&#39;,
+ &#39;rugi&#39;,
+ &#39;rupiah&#39;,
+ &#39;rusak&#39;,
+ &#39;rusiaukraina&#39;,
+ &#39;salah&#39;,
+ &#39;salmanan&#39;,
+ &#39;sama&#39;,
+ &#39;sandiaga&#39;,
+ &#39;saputra&#39;,
+ &#39;sebab&#39;,
+ &#39;sederhana&#39;,
+ &#39;sejarah&#39;,
+ &#39;selasa&#39;,
+ &#39;selidik&#39;,
+ &#39;senin&#39;,
+ &#39;serta&#39;,
+ &#39;sesuai&#39;,
+ &#39;siasia&#39;,
+ &#39;sidik&#39;,
+ &#39;sila&#39;,
+ &#39;simulasi&#39;,
+ &#39;sistem&#39;,
+ &#39;space&#39;,
+ &#39;staf&#39;,
+ &#39;suara&#39;,
+ &#39;subianto&#39;,
+ &#39;sungguh&#39;,
+ &#39;surabaya&#39;,
+ &#39;surat&#39;,
+ &#39;tahan&#39;,
+ &#39;tahap&#39;,
+ &#39;tahun&#39;,
+ &#39;tanggal&#39;,
+ &#39;teknologi&#39;,
+ &#39;temu&#39;,
+ &#39;tinggal&#39;,
+ &#39;tingkat&#39;,
+ &#39;tipu&#39;,
+ &#39;tni&#39;,
+ &#39;transaksi&#39;,
+ &#39;triliun&#39;,
+ &#39;tunda&#39;,
+ &#39;uang&#39;,
+ &#39;udara&#39;,
+ &#39;ulama&#39;,
+ &#39;ulang&#39;,
+ &#39;undur&#39;,
+ &#39;universitas&#39;,
+ &#39;upayaupaya&#39;,
+ &#39;widodo&#39;,
+ &#39;widya&#39;,
+ &#39;yudi&#39;,
+ &#39;yustiavandana&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matrix([[0.        , 0.21816289, 0.        , ..., 0.        , 0.        ,
+         0.        ],
+        [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+         0.        ],
+        [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+         0.        ],
+        ...,
+        [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+         0.        ],
+        [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+         0.        ],
+        [0.        , 0.        , 0.        , ..., 0.        , 0.        ,
+         0.        ]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">tfidf</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;B</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>B1</th>
+      <th>B2</th>
+      <th>B3</th>
+      <th>B4</th>
+      <th>B5</th>
+      <th>B6</th>
+      <th>B7</th>
+      <th>B8</th>
+      <th>B9</th>
+      <th>B10</th>
+      <th>...</th>
+      <th>B15</th>
+      <th>B16</th>
+      <th>B17</th>
+      <th>B18</th>
+      <th>B19</th>
+      <th>B20</th>
+      <th>B21</th>
+      <th>B22</th>
+      <th>B23</th>
+      <th>B24</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>aam</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.253281</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>ada</th>
+      <td>0.218163</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.218994</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>adaptasi</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.28709</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>adc</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>adil</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.262225</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>upayaupaya</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.230736</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>widodo</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.21966</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>widya</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.234709</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>yudi</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.261063</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>yustiavandana</th>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>273 rows × 24 columns</p>
+</div></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

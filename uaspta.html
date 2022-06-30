@@ -1,0 +1,1744 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>TOPIK MODELLING &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    UAS Web Mining-Topic Modelling(LSA)
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="UAS-LSA.html">
+   TOPIK MODELLING
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/uaspta.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fuaspta.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/uaspta.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   TOPIK MODELLING
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-data-berita">
+   1. Crawling Data Berita
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-processing-data">
+   2. Pre-Processing Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleansing-data">
+     Cleansing Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#import-module">
+       1. Import Module
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-dataset">
+       2. Load Dataset
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#drop-data-yang-tidak-diperlukan">
+       3. Drop data yang tidak diperlukan
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#clean-data-processing-data">
+       4. Clean Data &amp; Processing Data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stopword">
+     Stopword
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mengekstraksi-fitur-dan-membuat-document-term-matrix-dtm">
+       Mengekstraksi Fitur dan Membuat Document-Term-Matrix (DTM)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means">
+   K-Means
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelling-latent-semantic-analysis-lsa">
+     Modelling Latent Semantic Analysis (LSA)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>TOPIK MODELLING</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   TOPIK MODELLING
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-data-berita">
+   1. Crawling Data Berita
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-processing-data">
+   2. Pre-Processing Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleansing-data">
+     Cleansing Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#import-module">
+       1. Import Module
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-dataset">
+       2. Load Dataset
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#drop-data-yang-tidak-diperlukan">
+       3. Drop data yang tidak diperlukan
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#clean-data-processing-data">
+       4. Clean Data &amp; Processing Data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stopword">
+     Stopword
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mengekstraksi-fitur-dan-membuat-document-term-matrix-dtm">
+       Mengekstraksi Fitur dan Membuat Document-Term-Matrix (DTM)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means">
+   K-Means
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelling-latent-semantic-analysis-lsa">
+     Modelling Latent Semantic Analysis (LSA)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="topik-modelling">
+<h1>TOPIK MODELLING<a class="headerlink" href="#topik-modelling" title="Permalink to this headline">#</a></h1>
+<p>Topik Modelling adalah pendekatan yang digunakan untuk menganalisis sekumpulan dokumen yang berbentuk teks yang kemudian dikelompokkan menjadi beberapa topik. Proses topik modelling dapat dilakukan dengan tahapan-tahapan sebagai berikut:</p>
+<ol class="simple">
+<li><p>Crawling Data</p></li>
+<li><p>Pre-Processing Data</p>
+<ul class="simple">
+<li><p>Cleansing Data</p></li>
+<li><p>Stopword</p></li>
+</ul>
+</li>
+<li><p>Modelling (LSA)</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="crawling-data-berita">
+<h1>1. Crawling Data Berita<a class="headerlink" href="#crawling-data-berita" title="Permalink to this headline">#</a></h1>
+<p>Crawling data adalah proses pengambilan data secara online untuk sebuah kebutuhan umum. Proses yang dilakukan yaitu mengimport suatu informasi atau sebuah data yang telah di ambil ke dalam file lokal pada komputer. Crawling data dilakukan untuk mengekstraksi data yang mengacu pengumpulan data dari worldwide web, dokumen-dokumen, file, dan lainnya.</p>
+<p>Berikut adalah code untuk proses Crawling data website berita menggunakan Scrapy. Website berita yang di crawling adalah <a class="reference external" href="https://ekbis.sindonews.com/">https://ekbis.sindonews.com/</a>, data yang di ambil adalah data Judul, Waktu, Category berita, dan Deskripsi berita.</p>
+<p>import scrapy</p>
+<p>class QuotesSpider(scrapy.Spider):
+name = “quotes”</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def start_requests(self):
+    urls = [
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080211100070&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100002&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080211100050&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/090111100077&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/070111100093&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100029&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100011&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100023&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100007&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100047&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100082&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100054&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/090111100053&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/090111100003&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/090111100068&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100010&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100031&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/080111100084&#39;,
+        &#39;https://pta.trunojoyo.ac.id/welcome/detail/050111100448&#39;
+    ]
+    for url in urls:
+        yield scrapy.Request(url=url, callback=self.parse)
+
+def parse(self, response):
+    # print(response.url)
+    yield {
+        &#39;judul&#39;: response.css(&#39;#content_journal &gt; ul &gt; li &gt; div:nth-child(2) &gt; a::text&#39;).extract(),
+        &#39;penulis&#39;: response.css(&#39;#content_journal &gt; ul &gt; li &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; span::text&#39;).extract(),
+        &#39;dosen_pembimbing_1&#39;: response.css(&#39;#content_journal &gt; ul &gt; li &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; span::text&#39;).extract(),
+        &#39;dosen_pembimbing_2&#39;: response.css(&#39;#content_journal &gt; ul &gt; li &gt; div:nth-child(2) &gt; div:nth-child(4) &gt; span::text&#39;).extract(),
+        &#39;abstrak&#39;: response.css(&#39;#content_journal &gt; ul &gt; li &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; p::text&#39;).extract(),
+    }
+    # content_journal &gt; ul &gt; li:nth-child(1) &gt; div:nth-child(1) &gt; a
+    # content_journal &gt; ul &gt; li:nth-child(1) &gt; div:nth-child(1) &gt; a
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pre-processing-data">
+<h1>2. Pre-Processing Data<a class="headerlink" href="#pre-processing-data" title="Permalink to this headline">#</a></h1>
+<p>Pre-Processing Data merupakan suatu proses mengubah data mentah menjadi bentuk data yang lebih mudah dipahami. Proses dilakukan untuk membersihkan data dari angka, tanda baca, whitespace, dan kata yang tidak penting untuk digunakan. Tahapan dalam pre-processing data yaitu:</p>
+<section id="cleansing-data">
+<h2>Cleansing Data<a class="headerlink" href="#cleansing-data" title="Permalink to this headline">#</a></h2>
+<p>Cleaning data atau membersihkan data artinya mengeksekusi ulang data yang telah di peroleh, seperti menghapus atau menghilangkan data-data yang tidak lengkap, tidak relavan, dan tidak akurat. Langkah pertama yang dilakukan untuk membulai proses pre-processing data adalah dengan mengimport modul-module yang diperlukan untuk proses pre-processing.</p>
+<section id="import-module">
+<h3>1. Import Module<a class="headerlink" href="#import-module" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data visualisation and manipulation</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">style</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="c1">#configure</span>
+<span class="c1"># sets matplotlib to inline and displays graphs below the corressponding cell.</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline  
+<span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">,</span><span class="n">color_codes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#import nltk</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span><span class="p">,</span><span class="n">sent_tokenize</span>
+
+<span class="c1">#preprocessing</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>  <span class="c1">#stopwords</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span><span class="p">,</span><span class="n">sent_tokenize</span> <span class="c1"># tokenizing</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">PorterStemmer</span><span class="p">,</span><span class="n">LancasterStemmer</span>  <span class="c1"># using the Porter Stemmer and Lancaster Stemmer and others</span>
+<span class="kn">from</span> <span class="nn">nltk.stem.snowball</span> <span class="kn">import</span> <span class="n">SnowballStemmer</span>
+<span class="kn">from</span> <span class="nn">nltk.stem</span> <span class="kn">import</span> <span class="n">WordNetLemmatizer</span>  <span class="c1"># lammatizer from WordNet</span>
+
+<span class="c1"># for named entity recognition (NER)</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">ne_chunk</span>
+
+<span class="c1"># vectorizers for creating the document-term-matrix (DTM)</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span><span class="p">,</span><span class="n">CountVectorizer</span>
+
+<span class="c1">#stop-words</span>
+<span class="n">stop_words</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_10100</span><span class="o">/</span><span class="mf">2632210199.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># data visualisation and manipulation</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">style</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-dataset">
+<h3>2. Load Dataset<a class="headerlink" href="#load-dataset" title="Permalink to this headline">#</a></h3>
+<p>setelah proses import module yang digunakan, langkah kedua pada proses cleaning data adalah Load Data. Load Data adalah proses membuka/membaca file dari data yang akan digunakan untuk proses Pre-Processing, data yang digunakan biasanya berbentuk file csv, json dan lainnya. disini saya menggunakan format file csv.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;pta2.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>judul</th>
+      <th>penulis</th>
+      <th>abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PERLINDUNGAN HUKUM BAGI KONSUMEN ATAS PRODUK E...</td>
+      <td>Penulis : TOMMY ADITYA PARLINDUNGAN MARBUN</td>
+      <td>\r\nProduk elektronik adalah suatu benda berge...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Pertanggungjawaban Pidana Direksi BUMN (Perser...</td>
+      <td>Penulis : Maulina Nurlaily</td>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TELAAH KRITIS TENTANG\r\nPEMBERITAAN MEDIA MAS...</td>
+      <td>Penulis : Andri Eka Sugiarto</td>
+      <td>ABSTRAK\r\n\r\nJaminan akan kemerdekaan dan ke...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PELAKSANAAN PENDAFTARAN TANAH UNTUK PERTAMA KA...</td>
+      <td>Penulis : Agung Saiful Anam</td>
+      <td>ABSTRAK\r\n\r\nPendaftaran tanah untuk pertama...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>TRANSAKSI JUAL BELI MELALUI INTERNET PERSPEKTI...</td>
+      <td>Penulis : Adityo Nugroho</td>
+      <td>\r\nABSTRAK\r\n\r\n\tSalah satu bentuk kemajua...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>df.head() adalah proses untuk menampilkan data awal/teratas yang terdapat a pada file. Jika pada df.head() tidak diberikan parameter angka, hasil yang akan ditampilkan adalah 5 data teratas yang ada pada file.</p>
+</section>
+<section id="drop-data-yang-tidak-diperlukan">
+<h3>3. Drop data yang tidak diperlukan<a class="headerlink" href="#drop-data-yang-tidak-diperlukan" title="Permalink to this headline">#</a></h3>
+<p>Drop data adalah proses penghapusan data pada tabel data yang tidak diperlukan dalam proses pre-processing data. Pada tahap ini data yang dihapus adalah data yang ada pada tabel judul, waktu, dan category karena data yang akan digunakan adalah data yang ada pada tabel isi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop the publish date.</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;judul&#39;</span><span class="p">,</span><span class="s1">&#39;penulis&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>tahap setelah penghapusan data yaitu menampilkan hasil data yang telah di proses dengan menggunakan df.head(). pada bagian ini terdapat nilai 30 sebagai parameter dari data yang akan ditampilkan, ini berarti banyaknya data yang akan di tampilkan adalah 30 data dimulai dari hitungan index ke 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>\r\nProduk elektronik adalah suatu benda berge...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ABSTRAK\r\n\r\nJaminan akan kemerdekaan dan ke...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ABSTRAK\r\n\r\nPendaftaran tanah untuk pertama...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>\r\nABSTRAK\r\n\r\n\tSalah satu bentuk kemajua...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>ABSTRAK\r\nPelaksanaan perlindungan terhadap T...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ABSTRAK\r\n\r\nPerbedaan aliran yaitu antara a...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>ABSTRAK\r\nPasal 24C Ayat (1) Undang Undang Da...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>ABSTRAK\r\n\r\nUndang-undang No 12 tahun 2011 ...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oli bekas kapal merupakan oli sisa yang dihasi...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Undang-Undang tentang Penghapusan Kekerasan Da...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>ABSTRAK\r\n\r\nPelaksanaan terhadap kebijakan ...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>ABSTRAK\r\n\tPerkembangan teknologi informasi ...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Pers memaknai segala kegiatan jurnalistiknya m...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Tindak pidana narkotika merupakan tindak kejah...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Penelitian ini dilatarbelakangi oleh keinginta...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Peradilan in absentia adalah konsep di mana te...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="clean-data-processing-data">
+<h3>4. Clean Data &amp; Processing Data<a class="headerlink" href="#clean-data-processing-data" title="Permalink to this headline">#</a></h3>
+<p>Proses ini adalah proses untuk membersihkan data dari angka-angka</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">import</span> <span class="nn">re</span> <span class="c1">#regex library</span>
+
+<span class="c1"># import word_tokenize &amp; FreqDist from NLTK</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span> 
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span>
+
+<span class="c1">#remove number</span>
+<span class="k">def</span> <span class="nf">remove_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;hapus angka&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;abstrak&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_number</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abstrak</th>
+      <th>hapus angka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>\r\nProduk elektronik adalah suatu benda berge...</td>
+      <td>\r\nProduk elektronik adalah suatu benda berge...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ABSTRAK\r\n\r\nJaminan akan kemerdekaan dan ke...</td>
+      <td>ABSTRAK\r\n\r\nJaminan akan kemerdekaan dan ke...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ABSTRAK\r\n\r\nPendaftaran tanah untuk pertama...</td>
+      <td>ABSTRAK\r\n\r\nPendaftaran tanah untuk pertama...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>\r\nABSTRAK\r\n\r\n\tSalah satu bentuk kemajua...</td>
+      <td>\r\nABSTRAK\r\n\r\n\tSalah satu bentuk kemajua...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>ABSTRAK\r\nPelaksanaan perlindungan terhadap T...</td>
+      <td>ABSTRAK\r\nPelaksanaan perlindungan terhadap T...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ABSTRAK\r\n\r\nPerbedaan aliran yaitu antara a...</td>
+      <td>ABSTRAK\r\n\r\nPerbedaan aliran yaitu antara a...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>ABSTRAK\r\nPasal 24C Ayat (1) Undang Undang Da...</td>
+      <td>ABSTRAK\r\nPasal C Ayat () Undang Undang Dasar...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>ABSTRAK\r\n\r\nUndang-undang No 12 tahun 2011 ...</td>
+      <td>ABSTRAK\r\n\r\nUndang-undang No  tahun  tentan...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oli bekas kapal merupakan oli sisa yang dihasi...</td>
+      <td>Oli bekas kapal merupakan oli sisa yang dihasi...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_all</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># remove tab, new line, ans back slice</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">t&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">u&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="c1"># remove non ASCII (emoticon, chinese word, .etc)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+    <span class="c1"># remove mention, link, hashtag</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([@#][A-Za-z0-9]+)|(\w+:\/\/\S+)&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="c1"># remove incomplete URL</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;remov all&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;hapus angka&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_all</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abstrak</th>
+      <th>hapus angka</th>
+      <th>remov all</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>\r\nProduk elektronik adalah suatu benda berge...</td>
+      <td>\r\nProduk elektronik adalah suatu benda berge...</td>
+      <td>Produk elektronik adalah suatu benda bergerak ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ABSTRAK\r\n\r\nJaminan akan kemerdekaan dan ke...</td>
+      <td>ABSTRAK\r\n\r\nJaminan akan kemerdekaan dan ke...</td>
+      <td>ABSTRAK Jaminan akan kemerdekaan dan kebebasan...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ABSTRAK\r\n\r\nPendaftaran tanah untuk pertama...</td>
+      <td>ABSTRAK\r\n\r\nPendaftaran tanah untuk pertama...</td>
+      <td>ABSTRAK Pendaftaran tanah untuk pertama kali b...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>\r\nABSTRAK\r\n\r\n\tSalah satu bentuk kemajua...</td>
+      <td>\r\nABSTRAK\r\n\r\n\tSalah satu bentuk kemajua...</td>
+      <td>ABSTRAK Salah satu bentuk kemajuan teknologi a...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>ABSTRAK\r\nPelaksanaan perlindungan terhadap T...</td>
+      <td>ABSTRAK\r\nPelaksanaan perlindungan terhadap T...</td>
+      <td>ABSTRAK Pelaksanaan perlindungan terhadap Tena...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ABSTRAK\r\n\r\nPerbedaan aliran yaitu antara a...</td>
+      <td>ABSTRAK\r\n\r\nPerbedaan aliran yaitu antara a...</td>
+      <td>ABSTRAK Perbedaan aliran yaitu antara aliran s...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>ABSTRAK\r\nPasal 24C Ayat (1) Undang Undang Da...</td>
+      <td>ABSTRAK\r\nPasal C Ayat () Undang Undang Dasar...</td>
+      <td>ABSTRAK Pasal C Ayat () Undang Undang Dasar Ne...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>ABSTRAK\r\n\r\nUndang-undang No 12 tahun 2011 ...</td>
+      <td>ABSTRAK\r\n\r\nUndang-undang No  tahun  tentan...</td>
+      <td>ABSTRAK Undang-undang No tahun tentang Pembent...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oli bekas kapal merupakan oli sisa yang dihasi...</td>
+      <td>Oli bekas kapal merupakan oli sisa yang dihasi...</td>
+      <td>Oli bekas kapal merupakan oli sisa yang dihasi...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mengubah huruf menjadi kecil dengan menggunakan Series.str.lower() pada pandas</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;remov all&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;remov all&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;remov all&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     produk elektronik adalah suatu benda bergerak ...
+1     badan usaha milik negara (bumn) adalah badan u...
+2     abstrak jaminan akan kemerdekaan dan kebebasan...
+3     abstrak pendaftaran tanah untuk pertama kali b...
+4     abstrak salah satu bentuk kemajuan teknologi a...
+5     abstrak pelaksanaan perlindungan terhadap tena...
+6     abstrak perbedaan aliran yaitu antara aliran s...
+7     abstrak pasal c ayat () undang undang dasar ne...
+8     abstrak undang-undang no tahun tentang pembent...
+9     oli bekas kapal merupakan oli sisa yang dihasi...
+10    undang-undang tentang penghapusan kekerasan da...
+11    abstrak pelaksanaan terhadap kebijakan morator...
+12    abstrak perkembangan teknologi informasi dan k...
+13    pers memaknai segala kegiatan jurnalistiknya m...
+14    tindak pidana narkotika merupakan tindak kejah...
+15    penelitian ini dilatarbelakangi oleh keinginta...
+16    peradilan in absentia adalah konsep di mana te...
+Name: remov all, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="stopword">
+<h2>Stopword<a class="headerlink" href="#stopword" title="Permalink to this headline">#</a></h2>
+<p>Proses selanjutnya adalah proses Stopword. Stopword merupakan proses mengabaikan kata-kata yang perlu di abaikan dalam sebuah dokumen dan memilih kata-kata penting yang mewakili suatu dokumen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">headline</span><span class="p">):</span>
+  <span class="n">le</span><span class="o">=</span><span class="n">WordNetLemmatizer</span><span class="p">()</span>
+  <span class="n">word_tokens</span><span class="o">=</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">headline</span><span class="p">)</span>
+  <span class="n">tokens</span><span class="o">=</span><span class="p">[</span><span class="n">le</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word_tokens</span> <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">]</span>
+  <span class="n">cleaned_text</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">cleaned_text</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># time taking</span>
+<span class="c1">#nltk.download(&#39;wordnet&#39;)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;clean_text_isi&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;hapus angka&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abstrak</th>
+      <th>hapus angka</th>
+      <th>remov all</th>
+      <th>clean_text_isi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>\r\nProduk elektronik adalah suatu benda berge...</td>
+      <td>\r\nProduk elektronik adalah suatu benda berge...</td>
+      <td>produk elektronik adalah suatu benda bergerak ...</td>
+      <td>Produk elektronik benda bergerak dihasilkan pr...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+      <td>badan usaha milik negara (bumn) adalah badan u...</td>
+      <td>Badan Usaha Milik Negara BUMN Badan usaha moda...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ABSTRAK\r\n\r\nJaminan akan kemerdekaan dan ke...</td>
+      <td>ABSTRAK\r\n\r\nJaminan akan kemerdekaan dan ke...</td>
+      <td>abstrak jaminan akan kemerdekaan dan kebebasan...</td>
+      <td>ABSTRAK Jaminan kemerdekaan kebebasan pers Ind...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ABSTRAK\r\n\r\nPendaftaran tanah untuk pertama...</td>
+      <td>ABSTRAK\r\n\r\nPendaftaran tanah untuk pertama...</td>
+      <td>abstrak pendaftaran tanah untuk pertama kali b...</td>
+      <td>ABSTRAK Pendaftaran tanah kali bertujuan kepas...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>\r\nABSTRAK\r\n\r\n\tSalah satu bentuk kemajua...</td>
+      <td>\r\nABSTRAK\r\n\r\n\tSalah satu bentuk kemajua...</td>
+      <td>abstrak salah satu bentuk kemajuan teknologi a...</td>
+      <td>ABSTRAK Salah bentuk kemajuan teknologi jual b...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>setelah Stopword, proses selanjutnya sama dengan proses sebelumnya yaitu menghapus data pada tabel yang tidak diperlukan dan hanya menyisakan data pada tabel hasil dari proses sebelumnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;abstrak&#39;</span><span class="p">,</span><span class="s1">&#39;hapus angka&#39;</span><span class="p">,</span> <span class="s1">&#39;clean_text_isi&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>remov all</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>produk elektronik adalah suatu benda bergerak ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>badan usaha milik negara (bumn) adalah badan u...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>abstrak jaminan akan kemerdekaan dan kebebasan...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>abstrak pendaftaran tanah untuk pertama kali b...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>abstrak salah satu bentuk kemajuan teknologi a...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>abstrak pelaksanaan perlindungan terhadap tena...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>abstrak perbedaan aliran yaitu antara aliran s...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>abstrak pasal c ayat () undang undang dasar ne...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>abstrak undang-undang no tahun tentang pembent...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>oli bekas kapal merupakan oli sisa yang dihasi...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>undang-undang tentang penghapusan kekerasan da...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>abstrak pelaksanaan terhadap kebijakan morator...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>abstrak perkembangan teknologi informasi dan k...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>pers memaknai segala kegiatan jurnalistiknya m...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>tindak pidana narkotika merupakan tindak kejah...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>penelitian ini dilatarbelakangi oleh keinginta...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>peradilan in absentia adalah konsep di mana te...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Untuk menampilkan isi dari suatu index data pada tabel dapat dilakukan dengan menggunakan code berikut:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;remov all&#39;</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;undang-undang tentang penghapusan kekerasan dalam rumah tangga (uu- pkdrt) nomor tahun membuat sebagian orang berpikir bahwa masalah pribadi menjadi konsumsi pablik. tidak dapat diungkiri masyarakat kita menganggap masalah keluarga yang tidak perlu diungkap karenanya tidak layak diungkap ke muka umum. maka tidak salah, walaupun undang-undang ini sudah berlaku tahun, kasus yang dilaporkan masih sedikit. dalam pasal uu pkdrt, dimandatkan untuk dibuatnya peraturan pemerintah terkait pelaksanaan pemenuhan hak-hak korban dalam rangka pemulihan. peraturan pemerintah untuk uu pdkrt terkait dengan upaya pemulihan baru ditetapkan tahun , yakni peraturan pemerintah nomor tahun tentang penyelenggaraan dan kerjasama pemulihan korban kekerasan dalam rumah tangga. peraturan pemerintah ini menekankan bahwa pemulihan terhadap korban kdrt tidak hanya berupa pemulihan fisik, tetapi juga psikis. sehingga sangat diperlukan fasilitas dan kerjasama antar pihak yang telah disebutkan dalam undang-undang. peraturan pemerintah ini juga menyebutkan pentingnya pendamping. upaya-upaya seperti pemerintah kota surabaya melalui bapemas dan kb, sebagai penyelenggara pusat pelayanan terpadu perlindungan perempuan dan anak (pptpa) kota surabaya untuk memecahkan kebisuan dari korban karena ketidakberanian dan terbatasnya akses korban kepada hukum. selain itu juga untuk mengatasi fenomena gunung es kasus kdrt dan menjawab keadilan bagi korban dengan mengungkapkan kebenaran.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;abstrak_pre-processing&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="mengekstraksi-fitur-dan-membuat-document-term-matrix-dtm">
+<h3>Mengekstraksi Fitur dan Membuat Document-Term-Matrix (DTM)<a class="headerlink" href="#mengekstraksi-fitur-dan-membuat-document-term-matrix-dtm" title="Permalink to this headline">#</a></h3>
+<p>Term Frequency-Inverse Document Frequency (TF-IDF) adalah algoritma yang digunakan untuk menganalisa hubungan natara frase/kalimat dengan sekumpulan dokumen. Inti algoritma TF-IDF adalah menghitung terlebih dahulu nilai TF dan nilai IDF dari masing -masing dokumen.</p>
+<p>Term Frequency(TF) adalah jumlah kemunculan sebuah term pada sebuah dokumen
+Nilai TF dihitung menggunakan rumus:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{tf}(t, d)=\frac{f_{t_{1} d}}{\sum_{t^{\prime} \in d} f_{t^{\prime}, d}}
+\]</div>
+<p>Inverse Document Frequency(IDF) yaitu pengurangan dominasi term yang sering muncul diberbagai dokumen, dengan memperhitungkan kebalikan frekuensi dokumen yang mengandung suatu kata.
+dan nilai IDF dihitung dengan rumus:
+$<span class="math notranslate nohighlight">\(
+\operatorname{idf}=\log \left(\frac{D}{d f}\right)
+\)</span>$</p>
+<p>setelah mendapatkan nilai TF dan IDF, yang akan kita hitung adalah nilai dari TF-IDF, berikut adalah rumus perhitungannya:
+$<span class="math notranslate nohighlight">\(
+\begin{gathered}
+Tf-idf=t f_{i j} * i d f_{j} \\
+Tf-idf=t f_{i j} * \log \left(\frac{D}{d f}\right)
+\end{gathered}
+\)</span>$</p>
+<p>Catatan:</p>
+<p>Df = jumlah dokumen yang didalamnya memuat term tertentu</p>
+<p>D = Jumlah Dokumen yang di perbandingkan</p>
+<p>Terdapat beberapa poin penting yaitu:</p>
+<ol class="simple">
+<li><p>LSA umumnya diimplementasikan dengan nilai Tf-Idf di mana-mana dan bukan dengan Count Vectorizer.</p></li>
+<li><p>max_features tergantung pada daya komputasi dan juga pada eval. Metrik (skor koherensi adalah metrik untuk model topik).</p></li>
+<li><p>Nilai default untuk min_df &amp;max_df bekerja dengan baik.</p></li>
+<li><p>Dapat mencoba nilai yang berbeda untuk ngram_range.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;abstrak_pre-processing&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;remov all&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hasil-akhir&#39;</span><span class="p">]</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hasil-akhir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>produk elektronik adalah suatu benda bergerak ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>badan usaha milik negara (bumn) adalah badan u...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>abstrak jaminan akan kemerdekaan dan kebebasan...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>abstrak pendaftaran tanah untuk pertama kali b...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>abstrak salah satu bentuk kemajuan teknologi a...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="n">document</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;hasil-akhir&#39;</span><span class="p">]</span>
+<span class="n">a</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+
+<span class="c1">#create a vectorizer object</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+
+<span class="n">vectorizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+<span class="c1"># Printing the identified Unique words along with their indices</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vocabulary: &quot;</span><span class="p">,</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vocabulary:  {&#39;produk&#39;: 746, &#39;elektronik&#39;: 225, &#39;adalah&#39;: 6, &#39;suatu&#39;: 846, &#39;benda&#39;: 64, &#39;bergerak&#39;: 74, &#39;yang&#39;: 956, &#39;dihasilkan&#39;: 167, &#39;melalui&#39;: 458, &#39;proses&#39;: 751, &#39;produksi&#39;: 747, &#39;oleh&#39;: 588, &#39;pengusaha&#39;: 663, &#39;berupa&#39;: 100, &#39;peralatan&#39;: 688, &#39;atau&#39;: 37, &#39;alat&#39;: 20, &#39;bekerja&#39;: 59, &#39;berdasarkan&#39;: 72, &#39;kerja&#39;: 357, &#39;elektronika&#39;: 226, &#39;selalu&#39;: 808, &#39;update&#39;: 937, &#39;bervariasi&#39;: 101, &#39;baik&#39;: 49, &#39;dari&#39;: 134, &#39;segi&#39;: 801, &#39;bentuk&#39;: 65, &#39;maupun&#39;: 452, &#39;kecanggihannya&#39;: 322, &#39;contohnya&#39;: 121, &#39;televisi&#39;: 879, &#39;radio&#39;: 757, &#39;handphone&#39;: 249, &#39;perekam&#39;: 695, &#39;kaset&#39;: 307, &#39;compact&#39;: 117, &#39;disc&#39;: 203, &#39;kamera&#39;: 299, &#39;digital&#39;: 160, &#39;video&#39;: 944, &#39;dan&#39;: 132, &#39;lain&#39;: 412, &#39;jenis&#39;: 287, &#39;tersebut&#39;: 907, &#39;merupakan&#39;: 556, &#39;barang&#39;: 54, &#39;sering&#39;: 822, &#39;digunakan&#39;: 162, &#39;telah&#39;: 877, &#39;menjadi&#39;: 538, &#39;kebutuhan&#39;: 321, &#39;setiap&#39;: 827, &#39;manusia&#39;: 439, &#39;karena&#39;: 303, &#39;banyak&#39;: 51, &#39;membantu&#39;: 474, &#39;pekerjaan&#39;: 607, &#39;di&#39;: 142, &#39;kehidupan&#39;: 329, &#39;sehari&#39;: 802, &#39;hari&#39;: 252, &#39;dalam&#39;: 129, &#39;efesiensi&#39;: 223, &#39;waktu&#39;: 946, &#39;tenaga&#39;: 882, &#39;sehingga&#39;: 804, &#39;sangat&#39;: 787, &#39;diminati&#39;: 188, &#39;beredar&#39;: 73, &#39;tidak&#39;: 912, &#39;memiliki&#39;: 484, &#39;panduan&#39;: 599, &#39;bahasa&#39;: 47, &#39;indonesia&#39;: 271, &#39;negeri&#39;: 581, &#39;luar&#39;: 427, &#39;hal&#39;: 248, &#39;ini&#39;: 274, &#39;jelas&#39;: 285, &#39;melanggar&#39;: 459, &#39;pasal&#39;: 601, &#39;ayat&#39;: 41, &#39;huruf&#39;: 261, &#39;uupk&#39;: 943, &#39;peraturan&#39;: 690, &#39;menteri&#39;: 546, &#39;perdagangan&#39;: 693, &#39;republik&#39;: 769, &#39;nomor&#39;: 584, &#39;dag&#39;: 126, &#39;per&#39;: 685, &#39;tentang&#39;: 884, &#39;pendaftaran&#39;: 637, &#39;petunjuk&#39;: 726, &#39;penggunaan&#39;: 656, &#39;manual&#39;: 438, &#39;kartu&#39;: 306, &#39;jaminan&#39;: 282, &#39;garansi&#39;: 240, &#39;purna&#39;: 753, &#39;jual&#39;: 290, &#39;bagi&#39;: 45, &#39;telematika&#39;: 878, &#39;juga&#39;: 291, &#39;kewajiban&#39;: 375, &#39;pencantuman&#39;: 636, &#39;label&#39;: 410, &#39;pada&#39;: 595, &#39;tujuan&#39;: 926, &#39;peneliti&#39;: 645, &#39;untuk&#39;: 935, &#39;mengetahui&#39;: 523, &#39;apakah&#39;: 28, &#39;pelaku&#39;: 610, &#39;usaha&#39;: 940, &#39;menjual&#39;: 543, &#39;mencantumkan&#39;: 496, &#39;serta&#39;: 823, &#39;siapakah&#39;: 830, &#39;dapat&#39;: 133, &#39;digugat&#39;: 161, &#39;konsumen&#39;: 394, &#39;mengalami&#39;: 509, &#39;kerugian&#39;: 359, &#39;atas&#39;: 36, &#39;metode&#39;: 559, &#39;yuridis&#39;: 957, &#39;normatif&#39;: 586, &#39;adapun&#39;: 8, &#39;pendekatan&#39;: 641, &#39;ialah&#39;: 262, &#39;perundang&#39;: 723, &#39;undangan&#39;: 933, &#39;statute&#39;: 844, &#39;approach&#39;: 29, &#39;hasil&#39;: 255, &#39;penelitian&#39;: 646, &#39;menunjukkan&#39;: 547, &#39;bahwa&#39;: 48, &#39;termasuk&#39;: 903, &#39;wajib&#39;: 945, &#39;buku&#39;: 111, &#39;jika&#39;: 288, &#39;maka&#39;: 431, &#39;produsen&#39;: 748, &#39;membuat&#39;: 478, &#39;harus&#39;: 254, &#39;bertanggung&#39;: 93, &#39;jawab&#39;: 284, &#39;sedangkan&#39;: 798, &#39;berasal&#39;: 70, &#39;importir&#39;: 269, &#39;sebagai&#39;: 790, &#39;pihak&#39;: 730, &#39;memasukkan&#39;: 471, &#39;ke&#39;: 313, &#39;wilayah&#39;: 952, &#39;badan&#39;: 42, &#39;milik&#39;: 561, &#39;negara&#39;: 579, &#39;bumn&#39;: 112, &#39;sebagian&#39;: 792, &#39;seluruh&#39;: 811, &#39;modalnya&#39;: 563, &#39;dimiliki&#39;: 187, &#39;kekayaan&#39;: 335, &#39;dipisahkan&#39;: 199, &#39;namun&#39;: 575, &#39;segala&#39;: 800, &#39;ketentuan&#39;: 367, &#39;berlaku&#39;: 83, &#39;persero&#39;: 713, &#39;mengacu&#39;: 504, &#39;undang&#39;: 932, &#39;perseroan&#39;: 714, &#39;terbatas&#39;: 891, &#39;tapi&#39;: 871, &#39;kenyataannya&#39;: 348, &#39;kasus&#39;: 308, &#39;terjadi&#39;: 896, &#39;direksi&#39;: 200, &#39;dimana&#39;: 185, &#39;bertanggungjawab&#39;: 94, &#39;secara&#39;: 796, &#39;pidana&#39;: 728, &#39;kususnya&#39;: 409, &#39;tindak&#39;: 915, &#39;korupsi&#39;: 399, &#39;putusan&#39;: 755, &#39;hakim&#39;: 246, &#39;no&#39;: 583, &#39;pid&#39;: 727, &#39;dikarenakan&#39;: 171, &#39;modal&#39;: 562, &#39;jadi&#39;: 281, &#39;ketika&#39;: 374, &#39;dianggap&#39;: 149, &#39;penulisan&#39;: 673, &#39;yaitu&#39;: 954, &#39;bagaimana&#39;: 43, &#39;pertanggungjawaban&#39;: 719, &#39;mana&#39;: 433, &#39;menggunakan&#39;: 524, &#39;statue&#39;: 842, &#39;case&#39;: 116, &#39;diperoleh&#39;: 198, &#39;identik&#39;: 264, &#39;dengan&#39;: 140, &#39;keyword&#39;: 379, &#39;abstrak&#39;: 2, &#39;akan&#39;: 15, &#39;kemerdekaan&#39;: 345, &#39;kebebasan&#39;: 315, &#39;pers&#39;: 711, &#39;berpijak&#39;: 87, &#39;dua&#39;: 221, &#39;landasan&#39;: 416, &#39;hukum&#39;: 259, &#39;dasar&#39;: 135, &#39;tahun&#39;: 864, &#39;terjaminnya&#39;: 898, &#39;diharapkan&#39;: 165, &#39;mampu&#39;: 432, &#39;mengimplementasikan&#39;: 528, &#39;hak&#39;: 245, &#39;peran&#39;: 689, &#39;fungsi&#39;: 238, &#39;pemberi&#39;: 620, &#39;peringatan&#39;: 699, &#39;dini&#39;: 189, &#39;mengungkap&#39;: 533, &#39;ketidakadilan&#39;: 371, &#39;kesewenang&#39;: 363, &#39;wenangan&#39;: 951, &#39;penyelenggara&#39;: 676, &#39;tetapi&#39;: 909, &#39;melaksanakan&#39;: 456, &#39;disadari&#39;: 202, &#39;sekali&#39;: 805, &#39;melakukan&#39;: 457, &#39;pelanggaran&#39;: 611, &#39;asas&#39;: 31, &#39;praduga&#39;: 740, &#39;bersalah&#39;: 89, &#39;trial&#39;: 925, &#39;by&#39;: 114, &#39;the&#39;: 911, &#39;press&#39;: 742, &#39;isu&#39;: 278, &#39;menarik&#39;: 494, &#39;diteliti&#39;: 215, &#39;lebih&#39;: 421, &#39;lanjut&#39;: 418, &#39;sebab&#39;: 789, &#39;pemberitaan&#39;: 622, &#39;media&#39;: 454, &#39;massa&#39;: 446, &#39;mencamtumkan&#39;: 495, &#39;identitas&#39;: 265, &#39;bukan&#39;: 109, &#39;masalah&#39;: 442, &#39;historis&#39;: 258, &#39;konseptual&#39;: 390, &#39;menjawab&#39;: 542, &#39;diatas&#39;: 150, &#39;dikatakan&#39;: 173, &#39;mendakwa&#39;: 498, &#39;menuntut&#39;: 548, &#39;memutus&#39;: 490, &#39;seorang&#39;: 818, &#39;tanpa&#39;: 869, &#39;adanya&#39;: 7, &#39;bukti&#39;: 110, &#39;fakta&#39;: 230, &#39;sebenarnya&#39;: 794, &#39;penghakiman&#39;: 657, &#39;beritanya&#39;: 76, &#39;dikatagorikan&#39;: 172, &#39;peduli&#39;: 605, &#39;berita&#39;: 75, &#39;itu&#39;: 280, &#39;salah&#39;: 782, &#39;satu&#39;: 788, &#39;upaya&#39;: 936, &#39;pelaporan&#39;: 612, &#39;lapangan&#39;: 419, &#39;sesuai&#39;: 825, &#39;informatif&#39;: 273, &#39;kuhap&#39;: 405, &#39;butir&#39;: 113, &#39;kata&#39;: 309, &#39;kunci&#39;: 407, &#39;praduaga&#39;: 739, &#39;tanah&#39;: 866, &#39;pertama&#39;: 717, &#39;kali&#39;: 298, &#39;bertujuan&#39;: 99, &#39;memberikan&#39;: 477, &#39;kepastian&#39;: 352, &#39;rakyat&#39;: 758, &#39;dilaksanakan&#39;: 178, &#39;pemerintah&#39;: 628, &#39;membeikan&#39;: 475, &#39;solusi&#39;: 838, &#39;kepada&#39;: 350, &#39;masyarakat&#39;: 448, &#39;menentukan&#39;: 503, &#39;pilihan&#39;: 731, &#39;terhadap&#39;: 895, &#39;pendaftran&#39;: 638, &#39;pelaksanaan&#39;: 609, &#39;kendala&#39;: 347, &#39;dialami&#39;: 145, &#39;empiris&#39;: 227, &#39;data&#39;: 136, &#39;primer&#39;: 744, &#39;langsung&#39;: 417, &#39;wawancara&#39;: 950, &#39;sekunder&#39;: 806, &#39;studi&#39;: 845, &#39;kepustakaan&#39;: 354, &#39;analisis&#39;: 24, &#39;cara&#39;: 115, &#39;kualitatif&#39;: 404, &#39;petuk&#39;: 725, &#39;pajak&#39;: 596, &#39;letter&#39;: 423, &#39;tetap&#39;: 908, &#39;memperoleh&#39;: 486, &#39;penegasan&#39;: 644, &#39;konversi&#39;: 396, &#39;perubahan&#39;: 721, &#39;turun&#39;: 928, &#39;temurun&#39;: 881, &#39;menurut&#39;: 549, &#39;adat&#39;: 9, &#39;mengaturnya&#39;: 519, &#39;daftarkan&#39;: 125, &#39;dikantor&#39;: 170, &#39;pertanahan&#39;: 718, &#39;beberapa&#39;: 57, &#39;sulitnya&#39;: 851, &#39;mendapatkan&#39;: 499, &#39;koher&#39;: 386, &#39;masih&#39;: 444, &#39;dibawa&#39;: 152, &#39;kepala&#39;: 351, &#39;desa&#39;: 141, &#39;lama&#39;: 415, &#39;mengatasi&#39;: 517, &#39;kantor&#39;: 301, &#39;kabupaten&#39;: 296, &#39;bangkalan&#39;: 50, &#39;mengadakan&#39;: 505, &#39;sosialisai&#39;: 839, &#39;prosedur&#39;: 750, &#39;sosialisasi&#39;: 840, &#39;diberikan&#39;: 154, &#39;pengetahuan&#39;: 655, &#39;bidang&#39;: 104, &#39;dilakukan&#39;: 179, &#39;teratur&#39;: 890, &#39;berkesinambungan&#39;: 81, &#39;menjalin&#39;: 541, &#39;sama&#39;: 783, &#39;antara&#39;: 26, &#39;instansi&#39;: 275, &#39;lainnya&#39;: 413, &#39;kemajuan&#39;: 342, &#39;teknologi&#39;: 875, &#39;beli&#39;: 61, &#39;internet&#39;: 276, &#39;transaksi&#39;: 923, &#39;memudahkan&#39;: 488, &#39;penjual&#39;: 667, &#39;pembeli&#39;: 617, &#39;bertemu&#39;: 95, &#39;pandangan&#39;: 598, &#39;islam&#39;: 277, &#39;melarang&#39;: 461, &#39;mengandung&#39;: 512, &#39;unsur&#39;: 934, &#39;gharar&#39;: 241, &#39;merusak&#39;: 557, &#39;ketentraman&#39;: 366, &#39;umat&#39;: 929, &#39;muslim&#39;: 573, &#39;dipandang&#39;: 192, &#39;memenuhi&#39;: 481, &#39;syarat&#39;: 859, &#39;sahnya&#39;: 777, &#39;syariah&#39;: 860, &#39;menyimpulkan&#39;: 554, &#39;fiqi&#39;: 234, &#39;memandang&#39;: 465, &#39;diperbolehkan&#39;: 194, &#39;mashlahah&#39;: 443, &#39;mengambil&#39;: 510, &#39;manfaat&#39;: 437, &#39;menolak&#39;: 544, &#39;mudhorot&#39;: 569, &#39;an&#39;: 22, &#39;rangka&#39;: 759, &#39;memelihara&#39;: 480, &#39;syara&#39;: 858, &#39;memperhatikan&#39;: 485, &#39;persyaratan&#39;: 716, &#39;hukumnya&#39;: 260, &#39;mubah&#39;: 568, &#39;boleh&#39;: 108, &#39;selama&#39;: 809, &#39;penawaran&#39;: 635, &#39;ada&#39;: 4, &#39;katalog&#39;: 310, &#39;situs&#39;: 836, &#39;rukun&#39;: 772, &#39;kenyataanya&#39;: 349, &#39;timbul&#39;: 914, &#39;harga&#39;: 251, &#39;menaikkan&#39;: 491, &#39;sepihak&#39;: 821, &#39;kualitas&#39;: 403, &#39;gambaran&#39;: 239, &#39;mengeni&#39;: 522, &#39;bahan&#39;: 46, &#39;pengiriman&#39;: 659, &#39;disebabkan&#39;: 204, &#39;jelasnya&#39;: 286, &#39;jangka&#39;: 283, &#39;mengakibatkan&#39;: 507, &#39;status&#39;: 843, &#39;subhat&#39;: 847, &#39;pertimbangan&#39;: 720, &#39;kemaslahatan&#39;: 343, &#39;perlindungan&#39;: 706, &#39;wanita&#39;: 948, &#39;tkw&#39;: 920, &#39;kebijakan&#39;: 319, &#39;diberlakukan&#39;: 155, &#39;dilandasi&#39;: 180, &#39;banyaknya&#39;: 52, &#39;kekerasan&#39;: 336, &#39;menimpa&#39;: 536, &#39;penempatan&#39;: 647, &#39;tki&#39;: 919, &#39;tentu&#39;: 885, &#39;berdampak&#39;: 71, &#39;besar&#39;: 103, &#39;asal&#39;: 30, &#39;rumusan&#39;: 774, &#39;diambil&#39;: 147, &#39;kemudian&#39;: 346, &#39;mengidentifikasi&#39;: 526, &#39;penyimpangan&#39;: 682, &#39;aspek&#39;: 34, &#39;dinsosnakertrans&#39;: 190, &#39;kab&#39;: 295, &#39;lakukan&#39;: 414, &#39;pjtki&#39;: 732, &#39;ctkw&#39;: 122, &#39;tetapkan&#39;: 910, &#39;menganut&#39;: 516, &#39;nasional&#39;: 578, &#39;karenakan&#39;: 304, &#39;sendiri&#39;: 815, &#39;terdapat&#39;: 894, &#39;daerah&#39;: 124, &#39;mengatur&#39;: 518, &#39;khusus&#39;: 381, &#39;pra&#39;: 738, &#39;agar&#39;: 11, &#39;bertindak&#39;: 97, &#39;tegas&#39;: 874, &#39;lagi&#39;: 411, &#39;dinyatakan&#39;: 191, &#39;kurang&#39;: 408, &#39;terampil&#39;: 888, &#39;berangkatkan&#39;: 69, &#39;terlebih&#39;: 901, &#39;dahulu&#39;: 127, &#39;pembuatan&#39;: 624, &#39;penyederhanaan&#39;: 675, &#39;birokrasi&#39;: 106, &#39;pelayanan&#39;: 613, &#39;mengoptimalkan&#39;: 530, &#39;rekruitmen&#39;: 765, &#39;sampai&#39;: 785, &#39;pasca&#39;: 602, &#39;keberpihakan&#39;: 318, &#39;warga&#39;: 949, &#39;menghadapi&#39;: 525, &#39;pemenuhan&#39;: 626, &#39;bersangkutan&#39;: 91, &#39;berangkat&#39;: 68, &#39;pelaksana&#39;: 608, &#39;mandiri&#39;: 436, &#39;perbedaan&#39;: 691, &#39;aliran&#39;: 21, &#39;sunni&#39;: 854, &#39;syi&#39;: 861, &#39;ah&#39;: 12, &#39;penyebab&#39;: 674, &#39;terjadinya&#39;: 897, &#39;berlatar&#39;: 85, &#39;belakang&#39;: 60, &#39;beragama&#39;: 67, &#39;sampang&#39;: 786, &#39;bertitik&#39;: 98, &#39;tolak&#39;: 922, &#39;ajaran&#39;: 14, &#39;mensosialisasikan&#39;: 545, &#39;penuh&#39;: 671, &#39;nilai&#39;: 582, &#39;kedamaian&#39;: 324, &#39;keselamatan&#39;: 360, &#39;penal&#39;: 632, &#39;non&#39;: 585, &#39;mengantisipasi&#39;: 515, &#39;pendekataran&#39;: 642, &#39;kejahatan&#39;: 332, &#39;yakni&#39;: 955, &#39;penerapan&#39;: 648, &#39;jo&#39;: 289, &#39;kuhp&#39;: 406, &#39;kedua&#39;: 325, &#39;pendidikan&#39;: 643, &#39;dakwah&#39;: 128, &#39;musyawarah&#39;: 574, &#39;penyuluhan&#39;: 684, &#39;agama&#39;: 10, &#39;pembinaan&#39;: 623, &#39;berkelanjutan&#39;: 78, &#39;membangun&#39;: 473, &#39;komitmen&#39;: 387, &#39;bersama&#39;: 90, &#39;perjanjian&#39;: 702, &#39;pemulihan&#39;: 630, &#39;trauma&#39;: 924, &#39;korban&#39;: 397, &#39;sambang&#39;: 784, &#39;tatap&#39;: 873, &#39;muka&#39;: 570, &#39;silaturohmi&#39;: 832, &#39;tokoh&#39;: 921, &#39;memasang&#39;: 470, &#39;sepanduk&#39;: 819, &#39;informasi&#39;: 272, &#39;pesan&#39;: 724, &#39;kamtibmas&#39;: 300, &#39;masjid&#39;: 445, &#39;sholat&#39;: 828, &#39;jum&#39;: 292, &#39;at&#39;: 35, &#39;menyatakan&#39;: 550, &#39;mahkamah&#39;: 430, &#39;konstitusi&#39;: 392, &#39;berwenang&#39;: 102, &#39;mengadili&#39;: 506, &#39;tingkat&#39;: 918, &#39;terakhir&#39;: 887, &#39;putusannya&#39;: 756, &#39;bersifat&#39;: 92, &#39;final&#39;: 233, &#39;sengketa&#39;: 817, &#39;kewenangan&#39;: 376, &#39;lembaga&#39;: 422, &#39;kewenangannya&#39;: 377, &#39;meberikan&#39;: 453, &#39;aturan&#39;: 40, &#39;cukup&#39;: 123, &#39;perkara&#39;: 703, &#39;terkait&#39;: 899, &#39;negaranya&#39;: 580, &#39;disebut&#39;: 205, &#39;memaparkan&#39;: 469, &#39;digabungkan&#39;: 159, &#39;conceptual&#39;: 118, &#39;mengenai&#39;: 520, &#39;sajakah&#39;: 779, &#39;berperkara&#39;: 86, &#39;ditafsirkan&#39;: 211, &#39;hanya&#39;: 250, &#39;tekstual&#39;: 876, &#39;saja&#39;: 778, &#39;dalamnya&#39;: 130, &#39;implisit&#39;: 268, &#39;terkandung&#39;: 900, &#39;pokok&#39;: 734, &#39;diperlukan&#39;: 197, &#39;guna&#39;: 242, &#39;menjalankan&#39;: 540, &#39;pembentukan&#39;: 618, &#39;memunculkan&#39;: 489, &#39;kembali&#39;: 344, &#39;tap&#39;: 870, &#39;mpr&#39;: 566, &#39;kedalam&#39;: 323, &#39;hierarki&#39;: 256, &#39;sebelumnya&#39;: 793, &#39;memang&#39;: 467, &#39;sempat&#39;: 813, &#39;masuk&#39;: 447, &#39;sebagaimana&#39;: 791, &#39;diatur&#39;: 151, &#39;mprs&#39;: 567, &#39;xx&#39;: 953, &#39;tata&#39;: 872, &#39;urutan&#39;: 939, &#39;iii&#39;: 267, &#39;susunan&#39;: 857, &#39;perudang&#39;: 722, &#39;akhirnya&#39;: 16, &#39;dikeluarkan&#39;: 175, &#39;berlakunya&#39;: 84, &#39;ketetapan&#39;: 370, &#39;dimaksud&#39;: 184, &#39;penjelasan&#39;: 666, &#39;peninjauan&#39;: 665, &#39;materi&#39;: 449, &#39;mulai&#39;: 571, &#39;mekanisme&#39;: 455, &#39;pengujian&#39;: 660, &#39;menguji&#39;: 531, &#39;bertentangan&#39;: 96, &#39;manapun&#39;: 435, &#39;uud&#39;: 942, &#39;merugikan&#39;: 555, &#39;konstitusional&#39;: 393, &#39;membahas&#39;: 472, &#39;urgensi&#39;: 938, &#39;pengaturan&#39;: 653, &#39;constitutional&#39;: 120, &#39;review&#39;: 770, &#39;diduga&#39;: 157, &#39;manakah&#39;: 434, &#39;dianalisis&#39;: 148, &#39;perlu&#39;: 707, &#39;kekosongan&#39;: 337, &#39;keberlakuan&#39;: 317, &#39;peradilan&#39;: 686, &#39;berkewajiban&#39;: 82, &#39;menyelesaikan&#39;: 552, &#39;ketatanegaraan&#39;: 365, &#39;terlindungi&#39;: 902, &#39;demi&#39;: 138, &#39;mewujudkan&#39;: 560, &#39;keadilan&#39;: 314, &#39;substantif&#39;: 849, &#39;oli&#39;: 589, &#39;bekas&#39;: 58, &#39;kapal&#39;: 302, &#39;sisa&#39;: 833, &#39;kegiatan&#39;: 326, &#39;permesinan&#39;: 710, &#39;sebuah&#39;: 795, &#39;kerap&#39;: 356, &#39;dijual&#39;: 169, &#39;para&#39;: 600, &#39;abk&#39;: 0, &#39;saat&#39;: 775, &#39;tempat&#39;: 880, &#39;penampungan&#39;: 633, &#39;limbah&#39;: 425, &#39;seperti&#39;: 820, &#39;reception&#39;: 760, &#39;facility&#39;: 229, &#39;rf&#39;: 771, &#39;menampung&#39;: 492, &#39;perairan&#39;: 687, &#39;selat&#39;: 810, &#39;madura&#39;: 429, &#39;belum&#39;: 63, &#39;siap&#39;: 829, &#39;menangani&#39;: 493, &#39;semakin&#39;: 812, &#39;meningkat&#39;: 537, &#39;sesederhana&#39;: 824, &#39;perlakuan&#39;: 705, &#39;penjualan&#39;: 668, &#39;marak&#39;: 440, &#39;ataukah&#39;: 38, &#39;menelaah&#39;: 502, &#39;semua&#39;: 814, &#39;regulasi&#39;: 763, &#39;sedang&#39;: 797, &#39;ditangani&#39;: 213, &#39;adakah&#39;: 5, &#39;konsistensi&#39;: 391, &#39;kesesuaian&#39;: 362, &#39;diklasifikasikan&#39;: 177, &#39;diperjual&#39;: 196, &#39;belikan&#39;: 62, &#39;diperdagangkan&#39;: 195, &#39;penghapusan&#39;: 658, &#39;rumah&#39;: 773, &#39;tangga&#39;: 868, &#39;uu&#39;: 941, &#39;pkdrt&#39;: 733, &#39;orang&#39;: 591, &#39;berpikir&#39;: 88, &#39;pribadi&#39;: 743, &#39;konsumsi&#39;: 395, &#39;pablik&#39;: 594, &#39;diungkiri&#39;: 219, &#39;kita&#39;: 383, &#39;menganggap&#39;: 513, &#39;keluarga&#39;: 341, &#39;diungkap&#39;: 218, &#39;karenanya&#39;: 305, &#39;layak&#39;: 420, &#39;umum&#39;: 930, &#39;walaupun&#39;: 947, &#39;sudah&#39;: 850, &#39;dilaporkan&#39;: 181, &#39;sedikit&#39;: 799, &#39;dimandatkan&#39;: 186, &#39;dibuatnya&#39;: 156, &#39;pdkrt&#39;: 604, &#39;baru&#39;: 55, &#39;ditetapkan&#39;: 216, &#39;penyelenggaraan&#39;: 677, &#39;kerjasama&#39;: 358, &#39;menekankan&#39;: 501, &#39;kdrt&#39;: 312, &#39;fisik&#39;: 235, &#39;psikis&#39;: 752, &#39;fasilitas&#39;: 231, &#39;antar&#39;: 25, &#39;disebutkan&#39;: 206, &#39;menyebutkan&#39;: 551, &#39;pentingnya&#39;: 670, &#39;pendamping&#39;: 639, &#39;kota&#39;: 400, &#39;surabaya&#39;: 855, &#39;bapemas&#39;: 53, &#39;kb&#39;: 311, &#39;pusat&#39;: 754, &#39;terpadu&#39;: 905, &#39;perempuan&#39;: 697, &#39;anak&#39;: 23, &#39;pptpa&#39;: 737, &#39;memecahkan&#39;: 479, &#39;kebisuan&#39;: 320, &#39;ketidakberanian&#39;: 372, &#39;terbatasnya&#39;: 892, &#39;akses&#39;: 17, &#39;selain&#39;: 807, &#39;fenomena&#39;: 232, &#39;gunung&#39;: 243, &#39;es&#39;: 228, &#39;mengungkapkan&#39;: 534, &#39;kebenaran&#39;: 316, &#39;moratorium&#39;: 564, &#39;program&#39;: 749, &#39;mempunyai&#39;: 487, &#39;pengaruh&#39;: 652, &#39;bagaimanakah&#39;: 44, &#39;kejelasan&#39;: 334, &#39;sosiologis&#39;: 841, &#39;berjalan&#39;: 77, &#39;efektivitas&#39;: 222, &#39;mengurangi&#39;: 535, &#39;jumlah&#39;: 293, &#39;tentunya&#39;: 886, &#39;khususnya&#39;: 382, &#39;membenahi&#39;: 476, &#39;system&#39;: 862, &#39;perekrutan&#39;: 696, &#39;masa&#39;: 441, &#39;dihargai&#39;: 166, &#39;haknya&#39;: 247, &#39;perkembangan&#39;: 704, &#39;komunikasi&#39;: 388, &#39;dampak&#39;: 131, &#39;positif&#39;: 736, &#39;permasalahan&#39;: 709, &#39;khusunya&#39;: 380, &#39;pembuktian&#39;: 625, &#39;acara&#39;: 3, &#39;perdata&#39;: 694, &#39;lima&#39;: 424, &#39;macam&#39;: 428, &#39;surat&#39;: 856, &#39;saksi&#39;: 781, &#39;persangkaan&#39;: 712, &#39;pengakuan&#39;: 651, &#39;sumpah&#39;: 853, &#39;mengangkat&#39;: 514, &#39;dokumen&#39;: 220, &#39;sistem&#39;: 834, &#39;kekuatan&#39;: 338, &#39;diajukan&#39;: 143, &#39;penerapannya&#39;: 649, &#39;persidangan&#39;: 715, &#39;difokuskan&#39;: 158, &#39;mengkaji&#39;: 529, &#39;kaidah&#39;: 297, &#39;elekronik&#39;: 224, &#39;mendukung&#39;: 500, &#39;formal&#39;: 236, &#39;mengakomodasi&#39;: 508, &#39;materiil&#39;: 450, &#39;perluasan&#39;: 708, &#39;sah&#39;: 776, &#39;dikategorikan&#39;: 174, &#39;tulisan&#39;: 927, &#39;bisa&#39;: 107, &#39;akta&#39;: 18, &#39;bawah&#39;: 56, &#39;tangan&#39;: 867, &#39;apabila&#39;: 27, &#39;terpercaya&#39;: 906, &#39;ditampilkan&#39;: 212, &#39;print&#39;: 745, &#39;out&#39;: 593, &#39;otentik&#39;: 592, &#39;diakui&#39;: 144, &#39;dilegalisasi&#39;: 183, &#39;disisi&#39;: 210, &#39;kesulitan&#39;: 364, &#39;dihadirkan&#39;: 164, &#39;ite&#39;: 279, &#39;seharusnya&#39;: 803, &#39;peluang&#39;: 614, &#39;pemeriksaan&#39;: 627, &#39;setempat&#39;: 826, &#39;memanggil&#39;: 468, &#39;ahli&#39;: 13, &#39;memaknai&#39;: 464, &#39;jurnalistiknya&#39;: 294, &#39;asasi&#39;: 32, &#39;berkembangnya&#39;: 80, &#39;bentuknya&#39;: 66, &#39;sajian&#39;: 780, &#39;kriminal&#39;: 401, &#39;muncul&#39;: 572, &#39;menyiarkan&#39;: 553, &#39;berkembang&#39;: 79, &#39;melaporkan&#39;: 460, &#39;pejabat&#39;: 606, &#39;kehakiman&#39;: 328, &#39;kepolisian&#39;: 353, &#39;terancam&#39;: 889, &#39;patut&#39;: 603, &#39;diketahui&#39;: 176, &#39;kualifikasi&#39;: 402, &#39;konsep&#39;: 389, &#39;conseptual&#39;: 119, &#39;tindakan&#39;: 916, &#39;objektif&#39;: 587, &#39;subjektif&#39;: 848, &#39;perintah&#39;: 700, &#39;tindakannya&#39;: 917, &#39;sifat&#39;: 831, &#39;melawan&#39;: 462, &#39;formil&#39;: 237, &#39;rechtpersoon&#39;: 761, &#39;penafsiran&#39;: 631, &#39;sistematis&#39;: 835, &#39;keterkaitan&#39;: 369, &#39;meskipun&#39;: 558, &#39;perbuatan&#39;: 692, &#39;materiilnya&#39;: 451, &#39;pidananya&#39;: 729, &#39;penyiaran&#39;: 679, &#39;redaksi&#39;: 762, &#39;ataupun&#39;: 39, &#39;dialihkan&#39;: 146, &#39;penanggungjawab&#39;: 634, &#39;ditayangkan&#39;: 214, &#39;narkotika&#39;: 577, &#39;peningkatan&#39;: 664, &#39;tahunnya&#39;: 865, &#39;narapidana&#39;: 576, &#39;menjalani&#39;: 539, &#39;pemasyarakatan&#39;: 616, &#39;pengurangan&#39;: 662, &#39;remisi&#39;: 768, &#39;pemberian&#39;: 621, &#39;klas&#39;: 385, &#39;iia&#39;: 266, &#39;pamekasan&#39;: 597, &#39;melihat&#39;: 463, &#39;relevansi&#39;: 767, &#39;keputusan&#39;: 355, &#39;presiden&#39;: 741, &#39;binaan&#39;: 105, &#39;pemasayarakatan&#39;: 615, &#39;relevan&#39;: 766, &#39;korelasi&#39;: 398, &#39;mengenal&#39;: 521, &#39;diri&#39;: 201, &#39;motivasi&#39;: 565, &#39;pengembangan&#39;: 654, &#39;sumber&#39;: 852, &#39;daya&#39;: 137, &#39;dilatarbelakangi&#39;: 182, &#39;keingintahuannya&#39;: 330, &#39;penulis&#39;: 672, &#39;rekonstruksi&#39;: 764, &#39;dijelaskan&#39;: 168, &#39;ide&#39;: 263, &#39;pemikiran&#39;: 629, &#39;ketidaktahuan&#39;: 373, &#39;dituangkan&#39;: 217, &#39;skripsi&#39;: 837, &#39;memfokuskan&#39;: 483, &#39;perilaku&#39;: 698, &#39;lingkungan&#39;: 426, &#39;polres&#39;: 735, &#39;ternyata&#39;: 904, &#39;penting&#39;: 669, &#39;pengungkapan&#39;: 661, &#39;peristiwa&#39;: 701, &#39;keyakinan&#39;: 378, &#39;penyidik&#39;: 680, &#39;kejahatannya&#39;: 333, &#39;sengaja&#39;: 816, &#39;disengaja&#39;: 207, &#39;kejadian&#39;: 331, &#39;demikian&#39;: 139, &#39;in&#39;: 270, &#39;absentia&#39;: 1, &#39;terdakwa&#39;: 893, &#39;dipanggil&#39;: 193, &#39;hadir&#39;: 244, &#39;alasan&#39;: 19, &#39;pengadilan&#39;: 650, &#39;hingga&#39;: 257, &#39;kehadiran&#39;: 327, &#39;menganalisis&#39;: 511, &#39;disidangkan&#39;: 208, &#39;tiga&#39;: 913, &#39;pemberantasan&#39;: 619, &#39;diberi&#39;: 153, &#39;kesempatan&#39;: 361, &#39;mengikuti&#39;: 527, &#39;tahap&#39;: 863, &#39;penyelidikan&#39;: 678, &#39;penyidikan&#39;: 681, &#39;memanfaatkan&#39;: 466, &#39;kitab&#39;: 384, &#39;kelemahan&#39;: 339, &#39;dihadapi&#39;: 163, &#39;memeriksa&#39;: 482, &#39;pendapatnya&#39;: 640, &#39;keterangan&#39;: 368, &#39;optimal&#39;: 590, &#39;mengumulkan&#39;: 532, &#39;penyitaan&#39;: 683, &#39;aset&#39;: 33, &#39;tengah&#39;: 883, &#39;mencari&#39;: 497, &#39;harta&#39;: 253, &#39;disimpan&#39;: 209, &#39;kelompoknya&#39;: 340, &#39;umumnya&#39;: 931}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Encode the Document</span>
+<span class="n">vector</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+
+<span class="c1"># Summarizing the Encoded Texts</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encoded Document is:&quot;</span><span class="p">)</span>
+<span class="n">vector</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Encoded Document is:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0,  0,  0, ...,  0, 14,  1],
+       [ 0,  0,  0, ...,  0,  9,  1],
+       [ 0,  0,  1, ...,  0,  5,  0],
+       ...,
+       [ 0,  0,  0, ...,  0,  4,  1],
+       [ 0,  0,  0, ...,  0,  8,  1],
+       [ 0,  5,  0, ...,  0,  7,  1]], dtype=int64)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+
+<span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">(</span><span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">,</span> <span class="n">smooth_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">document</span><span class="p">))</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+<span class="n">dfb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tf</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+<span class="n">dfb</span>
+
+<span class="n">dfb</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;hasil-paling-akhir.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\ASUS\anaconda3\lib\site-packages\sklearn\utils\deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="k-means">
+<h1>K-Means<a class="headerlink" href="#k-means" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#--- Mengubah Variabel Data Frame Menjadi Array ---</span>
+<span class="n">x_array</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dfb</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.         0.         0.         ... 0.         0.17761181 0.02466853]
+ [0.         0.         0.         ... 0.         0.15307551 0.03307216]
+ [0.         0.         0.02571763 ... 0.         0.08098579 0.        ]
+ ...
+ [0.         0.         0.         ... 0.         0.05387803 0.02619094]
+ [0.         0.         0.         ... 0.         0.15099275 0.03669995]
+ [0.         0.26967408 0.         ... 0.         0.11808483 0.03280163]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">df_scaled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.22727748 -0.1831997  -0.23503274 ... -0.17470422 -0.19058394
+  -0.25352268]
+ [-0.22727748 -0.1831997  -0.23503274 ... -0.17470422 -0.19058394
+   8.05186458]
+ [-0.22727748 -0.1831997   0.56666642 ... -0.17470422 -0.19058394
+  -0.25352268]
+ ...
+ [ 0.73649433 -0.1831997  -0.23503274 ... -0.17470422  1.35287784
+  -0.25352268]
+ [-0.22727748 -0.1831997  -0.23503274 ... -0.17470422 -0.19058394
+  -0.25352268]
+ [ 0.52110884  0.81189341 -0.23503274 ...  0.58387963  1.00794218
+   0.75669767]]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="modelling-latent-semantic-analysis-lsa">
+<h2>Modelling Latent Semantic Analysis (LSA)<a class="headerlink" href="#modelling-latent-semantic-analysis-lsa" title="Permalink to this headline">#</a></h2>
+<p>LSA pada dasarnya adalah dekomposisi nilai tunggal.</p>
+<p>SVD menguraikan DTM asli menjadi tiga matriks S=U.(sigma). (V.T). Di sini matriks U menunjukkan matriks dokumen-topik sedangkan (V) adalah matriks topik-istilah.</p>
+<p>Setiap baris matriks U (document-term matrix) adalah representasi vektor dari dokumen yang sesuai. Panjang vektor ini adalah jumlah topik yang diinginkan. Representasi vektor untuk istilah-istilah dalam data kami dapat ditemukan dalam matriks V (matriks term-topic).</p>
+<p>Jadi, SVD memberi kita vektor untuk setiap dokumen dan istilah dalam data kita. Panjang setiap vektor adalah k. Kita kemudian dapat menggunakan vektor-vektor ini untuk menemukan kata-kata serupa dan dokumen serupa menggunakan metode kesamaan kosinus.</p>
+<p>Kita dapat menggunakan fungsi truncatedSVD untuk mengimplementasikan LSA. Parameter n_components adalah jumlah topik yang ingin kami ekstrak. Model kemudian cocok dan diubah pada hasil yang diberikan oleh vectorizer.</p>
+<p>Terakhir perhatikan bahwa LSA dan LSI (I untuk pengindeksan) adalah sama dan yang lebih baru hanya kadang-kadang digunakan dalam konteks pengambilan informasi.</p>
+<p>Singular Value Decomposition (SVD) adalah teknik reduksi dimensi yang bermanfaat untuk memperkecil nilai kompleksitas dalam pemrogresan term-document matrix. rumus SVD yaitu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ll}
+A_{m n}=U_{m m} x S_{m n} x V_{n n}^{T} \\\\\\
+\mathrm{~A}_{m n}= { matriks awal } \\
+\mathrm{U}_{m m}= { matriks ortogonal U } \\
+\mathrm{S}_{m n}= { matriks diagonal S } \\
+\mathrm{V}_{n n}^{\top}= { transpose matriks ortogonal } \mathrm{V}
+\end{array}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+<span class="n">lsa_model</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;randomized&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">lsa_top</span><span class="o">=</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lsa_top</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_top</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># (no_of_doc*no_of_topics)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2.55051078e-01  5.89269891e-02  5.03548369e-01  4.20357772e-01
+  -1.27637508e-02 -2.80748247e-01 -2.21599344e-01  2.24526787e-01
+   6.46089984e-02 -9.60528422e-02]
+ [ 3.19535654e-01 -1.81696694e-01 -1.89599214e-02 -1.91229040e-01
+  -2.23762243e-01 -2.70462813e-01 -3.06987123e-02 -1.01162106e-01
+   5.61635193e-01  5.43329733e-01]
+ [ 4.62151878e-01 -2.70592006e-01 -4.52337782e-01  1.79498026e-01
+   3.04816542e-02 -2.12361955e-01 -1.50571394e-01  1.73580054e-02
+  -4.20338351e-01 -4.08614482e-02]
+ [ 2.70683143e-01  1.35024352e-01  1.78370667e-01  2.18739830e-01
+  -2.73981764e-02  2.77183862e-01  3.23745408e-01 -3.57742263e-01
+  -3.34551270e-01  5.32091771e-01]
+ [ 1.43241002e-01 -4.94105995e-02  1.64618629e-01 -1.41786582e-01
+   7.50270330e-01 -8.27897242e-02  9.03292487e-02  1.02302911e-01
+  -3.81418543e-02  2.07751005e-01]
+ [ 3.17568511e-01  7.55390397e-01 -1.31555783e-01 -7.79086982e-02
+   9.49933501e-03 -2.04456780e-01  3.40277811e-02 -2.06717748e-02
+   2.28647747e-02 -5.67938040e-02]
+ [ 2.27825470e-01  5.74734619e-02 -7.51850393e-02  8.31677108e-02
+   9.76975432e-02  5.94538457e-01 -4.71133928e-01  2.17343248e-01
+   1.74087573e-01  1.75224142e-01]
+ [ 4.19233072e-01 -2.02223582e-01  2.25348101e-01 -4.49820329e-01
+  -2.60543083e-01 -1.29092166e-01 -6.76958751e-02  8.84847957e-02
+   2.00778171e-02 -8.59213566e-02]
+ [ 3.11978194e-01 -1.08549066e-01  2.79365233e-01 -3.62779618e-01
+  -2.83575777e-01  3.90657944e-02 -3.96925050e-02 -1.28262652e-01
+  -2.79573871e-01 -1.50538984e-01]
+ [ 2.91072241e-01 -1.68835016e-01  1.51383853e-01 -3.62012280e-01
+   5.42767006e-01 -4.82282546e-02  5.41477054e-02 -6.36434995e-02
+   4.34724385e-02 -1.45874861e-01]
+ [ 3.38394033e-01  1.36249447e-01  6.61164582e-02 -2.20337364e-01
+  -2.62829338e-02  4.67021848e-01 -2.90496325e-01 -4.75536849e-02
+  -3.75963779e-02 -9.73032027e-02]
+ [ 3.44541158e-01  7.51395698e-01 -1.53275006e-01 -7.57798739e-02
+   2.23725422e-02 -1.43447817e-01 -8.69091293e-03  9.16428180e-03
+   2.89698604e-02 -2.72981333e-02]
+ [ 3.29949727e-01 -2.17209372e-02  4.97495433e-01  4.89133688e-01
+   1.54196783e-03 -6.52775741e-02 -7.49372442e-02 -1.68513957e-02
+   1.14129949e-02 -5.55459750e-02]
+ [ 5.72666332e-01 -3.05247481e-01 -4.29252355e-01  1.73369594e-01
+   2.05945831e-02 -1.36269941e-01 -1.10354511e-01  3.09749998e-02
+  -8.50230610e-02  6.92748866e-02]
+ [ 2.11165743e-01  2.01137051e-04  3.50714757e-02 -8.45395053e-02
+  -1.68520816e-01  1.54022218e-01  4.95061858e-01  7.59776799e-01
+  -1.23819771e-01  1.13007755e-01]
+ [ 2.94166650e-01 -1.06435051e-01 -2.31652703e-01  2.69223595e-01
+   7.05568937e-02  2.02081501e-01  3.10179442e-01  1.50960254e-02
+   4.38398947e-01 -3.05792324e-01]
+ [ 3.98509818e-01 -9.61993665e-02  5.23783711e-02  5.92559425e-02
+  -5.32806534e-02  1.94326263e-01  3.77182057e-01 -3.42307424e-01
+   1.46587726e-01 -2.84502972e-01]]
+(17, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">lsa_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document 0 :&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">topic</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot; : &quot;</span><span class="p">,</span><span class="n">topic</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Document 0 :
+Topic  0  :  25.505107778232105
+Topic  1  :  5.892698907494205
+Topic  2  :  50.354836884786145
+Topic  3  :  42.035777241220586
+Topic  4  :  -1.2763750837396912
+Topic  5  :  -28.074824689375955
+Topic  6  :  -22.1599344026332
+Topic  7  :  22.452678676003774
+Topic  8  :  6.4608998367008565
+Topic  9  :  -9.605284220053086
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similalry dengan dokumen lain kita bisa melakukan ini. Namun perlu perhatikan bahwa nilai tidak ditambahkan ke 1 karena dalam LSA itu bukan probabiltiy dari suatu topik dalam dokumen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># (no_of_topics*no_of_words)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 750)
+[[ 0.01332691  0.06022948  0.03896505 ...  0.01809168  0.00607684
+   0.03020837]
+ [-0.0101396  -0.01907093  0.02300931 ... -0.00658073 -0.00277338
+  -0.01180538]
+ [ 0.01114724  0.01273155  0.00750698 ...  0.00804909  0.00875156
+   0.00802982]
+ ...
+ [-0.00582125 -0.10335224 -0.00131876 ...  0.00649241 -0.004991
+   0.01004952]
+ [ 0.00403454  0.04490748 -0.02087188 ...  0.02918382 -0.01103828
+   0.045522  ]
+ [-0.01407538 -0.09061661  0.01827539 ... -0.027426   -0.0061795
+  -0.00793788]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Untuk memperoleh kata-kata penting pada tiap dokument, yaitu dengan menggunakan code di bawah ini.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># most important words for each topic</span>
+<span class="n">vocab</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+    <span class="n">vocab_comp</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vocab</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+    <span class="n">sorted_words</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">vocab_comp</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">sorted_words</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic 0: 
+undang pers pidana negara penelitian elektronik hak tindak hukum penempatan 
+
+Topic 1: 
+penempatan tki moratorium bangkalan tkw perlindungan negeri kebijakan pelaksanaan pemerintah 
+
+Topic 2: 
+elektronik produk dokumen mpr tap alat bukti perdata indonesia undang 
+
+Topic 3: 
+elektronik produk dokumen bukti pers alat rekonstruksi perdata tanah pidana 
+
+Topic 4: 
+beli jual internet kapal oli bekas gharar unsur limbah transaksi 
+
+Topic 5: 
+penal korban upaya pemulihan tanah kekerasan non kuhp aliran beragama 
+
+Topic 6: 
+narkotika narapidana remisi tanah terdakwa rekonstruksi hak pemasyarakatan pemberian pidana 
+
+Topic 7: 
+narkotika narapidana remisi pemasyarakatan pemberian lembaga produk iia klas pamekasan 
+
+Topic 8: 
+bumn rekonstruksi direksi persero perkara penulis pidana kerugian perseroan terbatas 
+
+Topic 9: 
+bumn tanah direksi persero pendaftaran data kendala pertanahan milik kerugian 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
